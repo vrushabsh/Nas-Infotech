@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Careers from "./pages/Careers";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/industries" element={<Industries />}></Route>
         <Route path="/careers" element={<Careers />}></Route>
       </Routes>
+      <Footer />
     </>
   );
 };
