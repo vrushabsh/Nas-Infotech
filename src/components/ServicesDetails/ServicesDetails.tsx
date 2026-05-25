@@ -1,4 +1,4 @@
-const AboutHeroSection = () => {
+const ServicesHeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
@@ -14,17 +14,17 @@ const AboutHeroSection = () => {
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         {/* Heading */}
-        <h1 className="text-[55px] md:text-[65px] font-bold mb-4">About us</h1>
+        <h1 className="text-7xl md:text-8xl font-bold mb-4">Services Details</h1>
 
         {/* Breadcrumb */}
         <div className="flex items-center gap-3 text-xl font-medium">
           <span>Home</span>
           <span>/</span>
-          <span>About Us</span>
+          <span>Our Services</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default AboutHeroSection;
+export default ServicesHeroSection;

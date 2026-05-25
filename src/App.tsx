@@ -6,6 +6,7 @@ import Industries from "./pages/Industries";
 import Careers from "./pages/Careers";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -13,10 +14,12 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/industries" element={<Industries />}></Route>
         <Route path="/careers" element={<Careers />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       <Footer />
     </>
