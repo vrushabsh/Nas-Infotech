@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Shield,
-  Plane,
-  ArrowUpRight,
-  Star,
-} from "lucide-react";
+import { Shield, Plane, ArrowUpRight, Star } from "lucide-react";
 
 const servicesData = [
   {
@@ -32,8 +27,7 @@ const servicesData = [
     id: 4,
     icon: <Shield className="w-6 h-6 text-[#e68c3a]" />,
     title: "Health Insurance",
-    description:
-      "Secure your health and future with complete coverage plans.",
+    description: "Secure your health and future with complete coverage plans.",
   },
   {
     id: 5,
@@ -67,9 +61,7 @@ const AboutServicesSection = () => {
 
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
-        prevIndex >= totalSlides - 1
-          ? 0
-          : prevIndex + 1
+        prevIndex >= totalSlides - 1 ? 0 : prevIndex + 1,
       );
     }, 3000);
 
@@ -83,8 +75,8 @@ const AboutServicesSection = () => {
 
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
-        <div className="flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1 rounded-full text-xs font-semibold text-slate-700 shadow-sm mb-4">
-          <span className="text-emerald-600">✦</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm">
+          <span className="text-[#113217] text-sm">✲</span>
           Our Services
         </div>
 
@@ -108,8 +100,7 @@ const AboutServicesSection = () => {
         >
           {servicesData.map((service, index) => {
             const isActive =
-              index >= activeIndex &&
-              index < activeIndex + visibleCards;
+              index >= activeIndex && index < activeIndex + visibleCards;
 
             return (
               <div
@@ -152,10 +143,7 @@ const AboutServicesSection = () => {
                     </span>
 
                     <div className="w-6 h-6 rounded-full bg-[#ffb774] flex items-center justify-center text-slate-900 transform group-hover/btn:rotate-45 transition-transform duration-300">
-                      <ArrowUpRight
-                        className="w-3 h-3"
-                        strokeWidth={2.5}
-                      />
+                      <ArrowUpRight className="w-3 h-3" strokeWidth={2.5} />
                     </div>
                   </button>
                 </div>
@@ -183,45 +171,19 @@ const AboutServicesSection = () => {
       </div>
 
       {/* Footer */}
-      <div className="max-w-3xl mx-auto mt-16 flex flex-col items-center justify-center gap-4 text-center border-t border-slate-100 pt-8">
-        <div className="flex items-center justify-center flex-wrap gap-2 text-sm text-slate-700 font-medium">
-          <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-200 border border-white">
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop"
-              alt="Representative"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <span>
-            Where smart design and clean energy come together powerfully –
-          </span>
-
+      <div className="max-w-3xl mx-auto flex flex-col items-center justify-center gap-4 text-center border-t border-slate-100 pt-8">
+        <button className="flex items-center bg-[#ffb774] text-slate-900 font-semibold pl-6 pr-2 py-2 rounded-full transition-all duration-300 hover:bg-[#ffa751] hover:shadow-2xl hover:shadow-[#ffb774]/30 hover:-translate-y-0.5 group">
           <a
             href="#services"
-            className="text-[#e68c3a] underline font-bold hover:text-slate-900 transition-colors"
+            className="text-[#fff] font-bold hover:text-slate-900 transition-colors pr-2"
           >
             View All Services
           </a>
-        </div>
 
-        {/* Ratings */}
-        <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 tracking-wide">
-          <span>4.9/5</span>
-
-          <div className="flex items-center text-amber-400">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-3.5 h-3.5 fill-current"
-              />
-            ))}
+          <div className="bg-slate-900 text-white rounded-full p-2 transform group-hover:rotate-45 transition-transform duration-300">
+            <ArrowUpRight className="w-4 h-4" />
           </div>
-
-          <span className="text-slate-400 font-normal">
-            Over 4200 Reviews
-          </span>
-        </div>
+        </button>
       </div>
     </section>
   );

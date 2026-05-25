@@ -1,20 +1,36 @@
-import React from "react";
 
 export default function Footer() {
   return (
-    <div className="relative w-full bg-[#031d0e] text-white font-sans overflow-hidden">
-      {/* BACKGROUND GRAPHIC: Subtle geometric chevron/diamond grid pattern */}
+    <div className="relative w-full bg-[#123017] text-white font-sans overflow-hidden">
+      
+      {/* LAYER 1: Repeating Chevron Tile Pattern (Base Texture) */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23ffffff' stroke-width='1.5'/%3E%3C/svg%3E")`,
-          backgroundSize: "30px 30px",
+          backgroundImage: `url("Contact/dark-section-bg-image.png")`,
+          backgroundRepeat: "repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "contain",
         }}
       />
 
+      {/* LAYER 2: Top Spotlight Highlight Overlay (Stacked on top of layer 1, below content) */}
+      <div
+        className="absolute inset-0 w-full h-full pointer-events-none z-0"
+        style={{
+          backgroundImage: `url("Contact/dark-section-bg-image-2.png")`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center top",
+          backgroundSize: "cover",
+        }}
+      />
+
+      {/* Content Container - z-10 explicitly forces this above the backgrounds */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-20 pb-10 relative z-10">
+        
         {/* UPPER ROW: Grid Information Block */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-6 pb-16 border-b border-white/10">
+          
           {/* Column 1: Contact Details */}
           <div className="lg:col-span-3 space-y-6">
             <h4 className="text-xl font-bold tracking-tight text-white">
@@ -104,6 +120,7 @@ export default function Footer() {
                 "Web Development",
                 "Software Testing And QA",
                 "Devops",
+                "Cyber Security",
               ].map((service) => (
                 <li key={service}>
                   <a
@@ -163,7 +180,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* MIDDLE ROW: Branding and Social Links row */}
+        {/* MIDDLE ROW: Branding and Social Links */}
         <div className="py-8 flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-white/5">
           {/* Logo Frame */}
           <div className="flex items-center gap-3">
@@ -195,29 +212,41 @@ export default function Footer() {
               {[
                 {
                   label: "Facebook",
-                  path: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.95z",
-                  isFill: true,
                   link: "https://www.facebook.com/people/Nas-Infotech-Pvt-Ltd/61573733739516/?rdid=8j1dXCe8NqJOgJpL&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19A8t2aXHc%2FF",
+                  svg: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.95z" />
+                    </svg>
+                  )
                 },
                 {
                   label: "Dribbble",
-                  path: "M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z",
-                  isFill: false,
-                  lines: true,
                   link: "#",
+                  svg: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56"></path>
+                    </svg>
+                  )
                 },
                 {
                   label: "Instagram",
-                  path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01",
-                  isFill: false,
-                  rect: true,
                   link: "https://www.instagram.com/nas.infotech?igsh=bTBkZ3Z3cXE5ZDR3",
+                  svg: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01"></path>
+                    </svg>
+                  )
                 },
                 {
                   label: "LinkedIn",
-                  path: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z",
-                  isFill: true,
                   link: "https://www.linkedin.com/company/nas-infotech-pvt-ltd/?viewAsMember=true",
+                  svg: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  )
                 },
               ].map((social, i) => (
                 <a
@@ -226,32 +255,7 @@ export default function Footer() {
                   aria-label={social.label}
                   className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:bg-[#ffb057] hover:text-black hover:border-[#ffb057] hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill={social.isFill ? "currentColor" : "none"}
-                    stroke={social.isFill ? "none" : "currentColor"}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    {social.rect && (
-                      <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                    )}
-                    {social.lines && <circle cx="12" cy="12" r="10"></circle>}
-                    {social.lines && (
-                      <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56"></path>
-                    )}
-                    <path d={social.path} />
-                  </svg>
+                  {social.svg}
                 </a>
               ))}
             </div>
@@ -271,6 +275,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
       </div>
     </div>
   );
