@@ -1,11 +1,23 @@
 import { useState } from 'react';
 import { ArrowUpRight, MapPin, Clock, X, Briefcase, GraduationCap, Code } from 'lucide-react';
 
-import Img1 from "../../../public/Career/careerHeroImg.png"
+const Img1 = "/Career/careerHeroImg.png";
+
+interface Job {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  skills: string[];
+  experience: string;
+  education: string;
+  location: string;
+  type: string;
+}
 
 const CareerJobOpportunities = () => {
   const [activeCategory, setActiveCategory] = useState('View all');
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
   const categories = [
     'View all',
