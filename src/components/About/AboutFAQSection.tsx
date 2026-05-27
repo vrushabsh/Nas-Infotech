@@ -36,9 +36,9 @@ const faqData = [
 ];
 
 const AboutFAQSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -77,7 +77,7 @@ const AboutFAQSection = () => {
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-2 border border-slate-200 bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 shadow-sm">
-            <span className="text-green-700">✳</span>
+            <span className="text-greesn-700">✳</span>
             Frequently Asked Questions
           </div>
 

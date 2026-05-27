@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Headphones,
-  Sparkles,
-} from "lucide-react";
+import type { Variants, TargetAndTransition } from "framer-motion";
+import { ArrowUpRight, Headphones } from "lucide-react";
+import DynamicButton from "../ReusableComponents/DynamicButton";
+import DynamicBadge from "../ReusableComponents/DynamicBadge";
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 80 },
-  visible: (i) => ({
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -18,7 +17,7 @@ const cardVariants = {
   }),
 };
 
-const floatingAnimation = {
+const floatingAnimation: TargetAndTransition = {
   y: [0, -12, 0],
   transition: {
     duration: 4,
@@ -58,10 +57,11 @@ const AboutFeatureSection = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-md px-5 py-2 rounded-full text-white text-sm font-medium shadow-lg">
+          {/* <div className="flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-md px-5 py-2 rounded-full text-white text-sm font-medium shadow-lg">
             <Sparkles className="w-4 h-4 text-[#ffb95e]" />
             Core Feature
-          </div>
+          </div> */}
+          <DynamicBadge title={"Core Feature"} />
         </motion.div>
 
         {/* Heading */}
@@ -72,13 +72,13 @@ const AboutFeatureSection = () => {
           viewport={{ once: true }}
           className="text-center mt-8"
         >
-          <h2 className="text-4xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
             Powerful feature built for you
           </h2>
 
-          <p className="max-w-3xl mx-auto text-white/75 text-lg md:text-xl mt-6 leading-relaxed">
-            Our platform is designed with powerful, user-focused features
-            that make your experience smooth, efficient, and reliable.
+          <p className="max-w-3xl mx-auto text-white/75 text-sm md:text-lg mt-2 leading-relaxed">
+            Our platform is designed with powerful, user-focused features that
+            make your experience smooth, efficient, and reliable.
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const AboutFeatureSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mt-10"
         >
-          <button className="group flex items-center overflow-hidden rounded-full shadow-2xl">
+          {/* <button className="group flex items-center overflow-hidden rounded-full shadow-2xl">
             <span className="bg-[#ffb95e] text-black px-8 py-4 text-lg font-semibold">
               Contact Us
             </span>
@@ -98,11 +98,15 @@ const AboutFeatureSection = () => {
             <span className="bg-[#ffb95e] px-5 py-4 flex items-center justify-center border-l border-black/10">
               <ArrowUpRight className="w-6 h-6 transition-transform duration-300 group-hover:rotate-45" />
             </span>
-          </button>
+          </button> */}
+          <DynamicButton
+            title={"Contact Us"}
+            link={"http://localhost:5173/contact"}
+          />
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-end mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-end mt-15">
           {/* Card 1 */}
           <motion.div
             custom={0}
@@ -124,11 +128,11 @@ const AboutFeatureSection = () => {
                 <Headphones className="w-7 h-7 text-black" />
               </div>
 
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 24/7 Support
               </h3>
 
-              <p className="text-white/70 leading-relaxed text-lg">
+              <p className="text-white/70 leading-relaxed text-sm">
                 Our dedicated support available 24/7 to assist.
               </p>
             </div>
@@ -154,7 +158,7 @@ const AboutFeatureSection = () => {
             <div className="absolute inset-0 bg-green-400/5 blur-3xl" />
 
             <div className="relative z-10">
-              <h3 className="text-white text-3xl font-semibold leading-relaxed">
+              <h3 className="text-white text-2xl font-semibold leading-relaxed">
                 “Your safety & security are our highest priority every day”
               </h3>
 
@@ -214,7 +218,7 @@ const AboutFeatureSection = () => {
             }}
             className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-[28px] p-8 shadow-2xl relative overflow-hidden"
           >
-            <h3 className="text-4xl font-bold text-white leading-tight">
+            <h3 className="text-2xl font-bold text-white leading-tight">
               Family and Business Safety
             </h3>
 
@@ -222,7 +226,6 @@ const AboutFeatureSection = () => {
 
             <button className="group flex items-center gap-4 text-white font-semibold text-xl">
               Read More
-
               <div className="w-12 h-12 rounded-full bg-[#ffb95e] flex items-center justify-center">
                 <ArrowUpRight className="w-5 h-5 text-black transition-transform duration-300 group-hover:rotate-45" />
               </div>
@@ -239,7 +242,7 @@ const AboutFeatureSection = () => {
         </div>
 
         {/* Footer Line */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
@@ -249,12 +252,11 @@ const AboutFeatureSection = () => {
           <span className="bg-[#ffb95e] text-black px-4 py-1 rounded-full font-semibold mr-3">
             Free
           </span>
-
           Smart, Scalable, and High-Performance Insurance Company —
           <span className="text-[#ffb95e] font-semibold cursor-pointer hover:underline ml-2">
             Let’s Build Together!
           </span>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

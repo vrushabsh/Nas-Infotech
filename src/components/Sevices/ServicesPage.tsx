@@ -10,92 +10,74 @@ const services = [
   {
     title: "Software Development",
     description:
-      "We deliver innovative software tailored to your business needs.Trust us for reliable, high-quality development that ensures your success.",
+      "We deliver innovative software tailored to your business needs. Trust us for reliable, high-quality development that ensures your success.",
     image: "/Services/Services-Software Development.webp",
   },
   {
     title: "Artificial Intelligence and ML",
     description:
-      "Harness the power of AI and ML to transform your business operations. Our advanced solutions drive innovation, setting you ahead of the competition.",
+      "Harness the power of AI and ML to transform your business operations with advanced automation and intelligent systems.",
     image: "/Services/Services-AI and ML.webp",
   },
   {
     title: "Salesforce Services",
     description:
-      "Optimize your customer relationship management with our Salesforce services. We provide tailored solutions to streamline your processes and boost your efficiency.",
+      "Optimize your customer relationship management with scalable Salesforce ecosystem solutions.",
     image: "/Services/Services-Salesforce services.webp",
   },
   {
     title: "BI and Analytics",
     description:
-      "We provide comprehensive BI and analytics solutions tailored to your business needs, empowering data-driven decision-making for growth and efficiency.",
+      "Empower data-driven decision-making with modern analytics and visualization tools.",
     image: "/Services/pic-1.webp",
   },
   {
-    title: "Cloud Computating",
+    title: "Cloud Computing",
     description:
-      "Unlock scalable infrastructure with our cloud computing solutions. Seamlessly transition for enhanced reliability, security, and efficiency in operations.",
+      "Unlock scalable infrastructure with secure cloud-native transformation strategies.",
     image: "/Services/Services-Cloud Computing.webp",
   },
   {
     title: "Software Testing and QA",
     description:
-      "We guarantee flawless software performance with our rigorous testing and quality assurance services ensuring a seamless launch for your product.",
+      "Ensure flawless digital experiences with robust QA automation and testing systems.",
     image: "/Services/Services-Software Testing and QA.webp",
   },
   {
-    title: "Devops",
+    title: "DevOps",
     description:
-      "Streamline development and operations with our DevOps expertise. We optimize workflows, automate processes and ensure faster, efficient software delivery.",
+      "Accelerate deployment cycles using CI/CD pipelines and infrastructure automation.",
     image: "/Services/Services-Deveops.webp",
   },
   {
     title: "Big Data Analytics",
     description:
-      "Empower data-driven decisions with our advanced BI and analytics solutions. Gain valuable insights to drive your business forward with confidence and precision.",
+      "Transform raw data into meaningful business intelligence using scalable analytics.",
     image: "/Services/Services-Big data analytics.webp",
   },
   {
     title: "Web Development",
     description:
-      "Craft captivating online experiences tailored to your brand with our expert web development services, bringing your digital vision to life with precision and creativity.",
+      "Craft premium modern web experiences optimized for performance and scalability.",
     image: "/Services/Services-Web Development.jpeg",
   },
   {
     title: "Digital Marketing",
     description:
-      "Boost your online presence with our strategic solutions. From SEO to social media, we optimize your digital strategy for maximum impact and growth.",
+      "Expand your online reach with strategic digital campaigns and SEO growth.",
     image: "/Services/Services-Digital Marketing.jpeg",
   },
   {
     title: "Cyber Security",
     description:
-      "We provide comprehensive cybersecurity services, protecting your data, networks and systems from threats, ensuring confidentiality, integrity and availability.",
+      "Protect digital infrastructure with advanced cybersecurity and threat prevention.",
     image: "/Services/Services-Cyber Security.webp",
   },
   {
     title: "Product Development",
     description:
-      "We specialize in product development, leveraging cutting-edge technologies and agile methodologies to bring your ideas to life efficiently and innovatively.",
+      "Build scalable enterprise-grade products using agile engineering methodologies.",
     image: "/Services/Service-Product Development.webp",
-  },
-  {
-    title: "CRM Services",
-    description:
-      "Enhance customer satisfaction with tailored CRM solutions. Streamline processes and nurture relationships for sustained growth.",
-    image: "/Services/CRM Services.webp",
-  },
-  {
-    title: "IT Staffing",
-    description:
-      "Unlock your team's potential with our specialized IT staffing solutions. From talent acquisition to onboarding, we ensure a perfect fit for your success.",
-    image: "/Services/Services-IT Staff.webp",
-  },
-  {
-    title: "IT Service Support",
-    description:
-      "We provide comprehensive cybersecurity services, protecting your data, networks and systems from threats, ensuring confidentiality, integrity and availability.",
-    image: "/Services/Services-IT service support.webp",
   },
 ];
 
@@ -107,225 +89,338 @@ export default function ServicesPage() {
     : services.slice(0, 6);
 
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-10">
-      {/* CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-        {visibleServices.map((service, index) => (
+    <section className="w-full bg-[#f7f8fc] py-16 sm:py-24 lg:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* ================= TOP SECTION ================= */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
+
+          {/* LEFT */}
           <motion.div
-            key={index}
-            initial="initial"
-            animate="initial"
-            whileHover="hover"
-            whileInView={{ opacity: 1, y: 0 }}
+            className="max-w-3xl"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.08,
-            }}
-            className="
-              group
-              relative
-              h-[450px]
-              rounded-[24px]
-              overflow-hidden
-              cursor-pointer
-            "
           >
-            {/* IMAGE */}
-            <div className="absolute inset-0 overflow-hidden rounded-[24px]">
-              <motion.img
-                src={service.image}
-                alt={service.title}
-                variants={{
-                  hover: {
-                    scale: 1.06,
-                  },
-                }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full object-cover"
-              />
 
-              {/* DARK OVERLAY */}
-              <div
-                className="
-                  absolute
-                  inset-0
-                  bg-black/10
-                  group-hover:bg-black/20
-                  transition-all
-                  duration-500
-                "
-              />
-
-              {/* FLASH EFFECT */}
-              <motion.div
-                variants={{
-                  hover: {
-                    x: ["-180%", "240%"],
-                    opacity: [0, 0.4, 0],
-                    transition: {
-                      duration: 0.9,
-                    },
-                  },
-                }}
-                className="
-                  absolute
-                  top-0
-                  left-0
-                  h-full
-                  w-[28%]
-                  bg-white/40
-                  blur-md
-                  rotate-12
-                  z-20
-                "
-              />
-            </div>
-
-            {/* CONTENT BOX */}
+            {/* Badge */}
             <motion.div
-              variants={{
-                hover: {
-                  y: -18,
-                  scale: 1.02,
-                  boxShadow:
-                    "0px 25px 45px rgba(0,0,0,0.18)",
-                },
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm mb-5"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-[#FFB057] text-sm">✲</span>
+              Our Services
+            </motion.div>
+
+            {/* Premium Reveal Heading */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ staggerChildren: 0.03 }}
+              className="overflow-hidden"
+            >
+              <h2 className="text-[#0a123d] text-3xl sm:text-4xl md:text-5xl font-black leading-[1.1] tracking-tight flex flex-wrap">
+
+                {"Transforming Ideas Into ".split("").map(
+                  (char, index) => (
+                    <motion.span
+                      key={`a-${index}`}
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          y: 50,
+                          filter: "blur(8px)",
+                        },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          filter: "blur(0px)",
+                        },
+                      }}
+                      transition={{
+                        duration: 0.4,
+                      }}
+                    >
+                      {char === " " ? "\u00A0" : char}
+                    </motion.span>
+                  )
+                )}
+
+                {"Digital Excellence".split("").map(
+                  (char, index) => (
+                    <motion.span
+                      key={`b-${index}`}
+                      className="text-[#FFB057]"
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          y: 50,
+                          filter: "blur(8px)",
+                        },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          filter: "blur(0px)",
+                        },
+                      }}
+                      transition={{
+                        duration: 0.4,
+                      }}
+                    >
+                      {char === " " ? "\u00A0" : char}
+                    </motion.span>
+                  )
+                )}
+
+              </h2>
+            </motion.div>
+
+          </motion.div>
+
+          {/* RIGHT */}
+          <motion.p
+            className="max-w-xl text-gray-500 text-sm sm:text-base leading-relaxed font-medium"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            We provide scalable enterprise solutions designed to accelerate
+            innovation, optimize digital operations and empower businesses with
+            modern technologies.
+          </motion.p>
+
+        </div>
+
+        {/* ================= SERVICE GRID ================= */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          {visibleServices.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 80,
+                scale: 0.92,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
               }}
               transition={{
-                duration: 0.4,
-                ease: "easeOut",
+                duration: 0.7,
+                delay: index * 0.08,
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -10,
               }}
               className="
-                absolute
-                bottom-4
-                left-1/2
-                -translate-x-1/2
-                w-[90%]
-                bg-[#f8f8f8]
-                rounded-[18px]
-                px-4
-                pt-5
-                pb-5
-                shadow-[0_10px_30px_rgba(0,0,0,0.12)]
-                z-30
+                group
+                relative
+                h-[470px]
+                rounded-[28px]
+                overflow-hidden
+                bg-white
+                shadow-[0_10px_40px_rgba(0,0,0,0.06)]
+                border
+                border-gray-100
               "
             >
-              {/* TITLE */}
-              <h3 className="text-[18px] md:text-[20px] font-bold text-[#0a123d]">
-                {service.title}
-              </h3>
 
-              {/* HOVER CONTENT */}
-              <motion.div
-                variants={{
-                  initial: {
-                    height: 0,
-                    opacity: 0,
-                    marginTop: 0,
-                  },
-                  hover: {
-                    height: "auto",
-                    opacity: 1,
-                    marginTop: 16,
-                  },
-                }}
-                transition={{
-                  duration: 0.4,
-                  ease: "easeInOut",
-                }}
-                className="overflow-hidden"
-              >
-                {/* DESCRIPTION */}
-                <p className="text-[14px] leading-[22px] text-[#555] mb-3">
-                  {service.description}
-                </p>
+              {/* IMAGE */}
+              <div className="relative w-full h-full overflow-hidden">
 
-
-              </motion.div>
-              {/* LINE */}
-              <div className="w-full h-[1px] bg-gray-200 mb-3" />
-
-              {/* LEARN MORE */}
-              <motion.div
-                variants={{
-                  hover: {
-                    x: 3,
-                  },
-                }}
-                className="flex items-center gap-4"
-              >
-                <span className="text-[15px] font-semibold text-[#0a123d]">
-                  Learn more
-                </span>
-
-                {/* BUTTON */}
-                <motion.div
-                  variants={{
-                    hover: {
-                      rotate: 45,
-                      scale: 1.1,
-                    },
+                <motion.img
+                  src={service.image}
+                  alt={service.title}
+                  whileHover={{
+                    scale: 1.08,
                   }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.6,
+                  }}
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                {/* Shine Effect */}
+                <motion.div
+                  initial={{ x: "-150%" }}
+                  whileHover={{
+                    x: "250%",
+                  }}
+                  transition={{
+                    duration: 0.9,
                   }}
                   className="
-                      w-[38px]
-                      h-[38px]
+                    absolute
+                    top-0
+                    left-0
+                    h-full
+                    w-[30%]
+                    bg-white/20
+                    blur-lg
+                    rotate-12
+                  "
+                />
+
+              </div>
+
+              {/* CONTENT */}
+              <motion.div
+                whileHover={{
+                  y: -10,
+                }}
+                transition={{
+                  duration: 0.35,
+                }}
+                className="
+                  absolute
+                  bottom-4
+                  left-1/2
+                  -translate-x-1/2
+                  w-[90%]
+                  bg-white
+                  rounded-[24px]
+                  p-5
+                  shadow-xl
+                  z-20
+                "
+              >
+
+                {/* Title */}
+                <h3 className="text-[20px] font-bold text-[#0a123d] leading-tight">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <motion.div
+                  initial={{
+                    height: 0,
+                    opacity: 0,
+                  }}
+                  whileHover={{
+                    height: "auto",
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                  }}
+                  className="overflow-hidden"
+                >
+                  <p className="text-[14px] leading-[24px] text-[#666] mt-4">
+                    {service.description}
+                  </p>
+                </motion.div>
+
+                {/* Divider */}
+                <div className="w-full h-[1px] bg-gray-200 my-4" />
+
+                {/* CTA */}
+                <motion.div
+                  whileHover={{
+                    x: 4,
+                  }}
+                  className="flex items-center justify-between"
+                >
+
+                  <span className="text-[15px] font-semibold text-[#0a123d]">
+                    Learn More
+                  </span>
+
+                  <motion.div
+                    whileHover={{
+                      rotate: 45,
+                      scale: 1.08,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                    className="
+                      w-10
+                      h-10
                       rounded-full
-                      bg-[#f7b457]
+                      bg-[#FFB057]
                       flex
                       items-center
                       justify-center
                       shadow-md
                     "
-                >
-                  <ArrowUpRight
-                    size={18}
-                    className="text-[#0a123d]"
-                  />
+                  >
+                    <ArrowUpRight
+                      size={18}
+                      className="text-[#0a123d]"
+                    />
+                  </motion.div>
+
                 </motion.div>
+
               </motion.div>
+
             </motion.div>
-          </motion.div>
-        ))}
-      </div>
+          ))}
 
-      {/* SHOW MORE BUTTON */}
-      {services.length > 6 && (
-        <div className="flex justify-center mt-14">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.96 }}
-            onClick={() => setShowAll(!showAll)}
-            className="
-              inline-flex
-              items-center
-              gap-3
-              bg-[#0a123d]
-              text-white
-              px-8
-              py-4
-              rounded-full
-              text-[16px]
-              font-semibold
-              shadow-lg
-              hover:bg-[#111b52]
-              transition-all
-              duration-300
-            "
-          >
-            {showAll ? "Show Less" : "Show More"}
-
-            {showAll ? (
-              <ChevronUp size={20} />
-            ) : (
-              <ChevronDown size={20} />
-            )}
-          </motion.button>
         </div>
-      )}
+
+        {/* ================= SHOW MORE ================= */}
+        {services.length > 6 && (
+          <motion.div
+            className="flex justify-center mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{
+                scale: 0.96,
+              }}
+              onClick={() => setShowAll(!showAll)}
+              className="
+                inline-flex
+                items-center
+                gap-3
+                bg-[#0a123d]
+                text-white
+                px-8
+                py-4
+                rounded-full
+                text-[16px]
+                font-semibold
+                shadow-lg
+                hover:bg-[#111b52]
+                transition-all
+                duration-300
+              "
+            >
+
+              {showAll ? "Show Less" : "Explore More Services"}
+
+              {showAll ? (
+                <ChevronUp size={20} />
+              ) : (
+                <ChevronDown size={20} />
+              )}
+
+            </motion.button>
+
+          </motion.div>
+        )}
+
+      </div>
     </section>
   );
 }
