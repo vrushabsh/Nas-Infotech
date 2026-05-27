@@ -2,8 +2,6 @@
 // If you are using react-icons, you can import icons like this:
 // import { Lightbulb, Users, BarChart3, TrendingUp } from 'lucide-react';
 
-import React from 'react';
-
 function CareerOurCulture() {
   // Data extracted from Page 1
   const cultureData = [
@@ -78,7 +76,7 @@ function CareerOurCulture() {
             
             {/* Nested Mini-Cards */}
             <div className="space-y-3">
-              {cultureData[1].listItems.map((item, index) => (
+              {cultureData[1].listItems?.map((item, index) => (
                 <div key={index} className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between transition-transform hover:-translate-y-0.5">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500 font-semibold">
