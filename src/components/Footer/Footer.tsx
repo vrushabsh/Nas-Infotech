@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return (
     <div className="relative w-full bg-[#123017] text-white font-sans overflow-hidden">
@@ -182,25 +181,20 @@ export default function Footer() {
 
         {/* MIDDLE ROW: Branding and Social Links */}
         <div className="py-8 flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-white/5">
-          {/* Logo Frame */}
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full bg-[#ffb057] flex items-center justify-center text-black">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
+          
+          {/* Logo Frame Integration */}
+          <div className="flex items-center select-none shrink-0">
+            {/* Tuned using precise arbitrary Tailwind classes for proportional clarity:
+              - Mobile size box: 180px width, 48px height
+              - Larger display box (lg:): 220px width, 55px height
+            */}
+            <div className="w-[180px] lg:w-[220px] h-[48px] lg:h-[55px] flex items-center justify-start overflow-hidden">
+              <img
+                src="/logo1.png"
+                alt="NAS-INFOTECH Logo"
+                className="w-full h-full object-cover object-left"
+              />
             </div>
-            <span className="text-2xl font-black tracking-tight text-white">
-              NAS-INFOTECH<span className="text-[#ffb057]">.</span>
-            </span>
           </div>
 
           {/* Social Icons Stack */}

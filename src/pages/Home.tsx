@@ -1,3 +1,4 @@
+import AboutTestimonialsSection from "../components/About/AboutTestimonialsSection";
 import HomeAboutUs from "../components/Home/HomeAboutUs";
 import HomeContactUs from "../components/Home/HomeContactUs";
 import HomeCoreFeatures from "../components/Home/HomeCoreFeatures";
@@ -18,6 +19,7 @@ const Home = () => {
         <HomeWhatWeDo />
         <HomeCoreFeatures />
         <HomeContactUs />
+        <AboutTestimonialsSection />
         <HomeFAQ />
       </div>
     </div>

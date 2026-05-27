@@ -15,7 +15,7 @@ const AboutCompany: React.FC = () => {
       id: 1,
       title: "Our Mission",
       description:
-        "Our mission is to empower businesses with robust, scalable and secure IT solutions that enhance efficiency, foster innovation and drive growth. We are committed to delivering excellence through our comprehensive range of services, tailored to meet the unique needs of each client.",
+        "Our mission is to empower businesses with robust, scalable and secure IT solutions that enhance efficiency, foster innovation and drive growth.",
       icon: <Target className="w-5 h-5 text-black" />,
       imageUrl:
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600",
@@ -24,7 +24,7 @@ const AboutCompany: React.FC = () => {
       id: 2,
       title: "Our Vision",
       description:
-        "We envision a world where businesses of all sizes can harness the power of technology to achieve their full potential. Our goal is to be the trusted partner for companies seeking to innovate and transform their operations through cutting-edge software solutions.",
+        "We envision a world where businesses of all sizes can harness the power of technology to achieve their full potential.",
       icon: <Eye className="w-5 h-5 text-black" />,
       imageUrl:
         "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
@@ -33,7 +33,7 @@ const AboutCompany: React.FC = () => {
       id: 3,
       title: "Our Values",
       description:
-        "At our company, we uphold a commitment to honesty, integrity and ethics in everything we do. We foster innovation through teamwork, valuing diverse perspectives and treating everyone with respect. These core values guide our actions and inspire us to create a positive impact in our work and communities.",
+        "At our company, we uphold a commitment to honesty, integrity and ethics in everything we do.",
       icon: <ShieldCheck className="w-5 h-5 text-black" />,
       imageUrl:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600",
@@ -49,11 +49,11 @@ const AboutCompany: React.FC = () => {
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm">
               <span className="text-[#113217] text-sm">✲</span>
-              Our Approach
+              About Us
             </div>
 
             {/* Main Header Title */}
-            <h2 className="text-[#0a1118] text-3xl sm:text-4xl md:text-4xl font-bold leading-[1.15] tracking-tight">
+            <h2 className="text-[#0a1118] text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight">
               Putting your <span className="text-[#FFB057]">Needs </span>
               at the <br /> <span className="text-[#FFB057]">Center </span>
               of every <span className="text-[#FFB057]">Policy</span>
@@ -81,21 +81,25 @@ const AboutCompany: React.FC = () => {
         </div>
 
         {/* ================= THREE-COLUMN CONTENT CARDS ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
           {cards.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-[10px] p-6 sm:p-4 shadow-sm border border-gray-100/60 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]"
+              className="bg-white rounded-[10px] p-6 sm:p-4 shadow-sm border border-gray-100/60 
+              flex flex-col justify-between transition-all duration-300 hover:shadow-xl 
+              hover:translate-y-[-4px]"
             >
               {/* Card Upper Section */}
-              <div className="space-y-5 mb-8">
+              <div className="space-y-3 mb-8">
                 {/* Circular Icon Container */}
                 <div className="w-12 h-12 rounded-full bg-[#FFB057] flex items-center justify-center shrink-0 shadow-sm relative">
                   {card.icon}
                   {/* Decorative dot alignment tracking mockup style */}
                   {card.id === 3 && (
-                    <span className="absolute -top-1 -right-12 w-2 h-2 bg-[#FFB057] rounded-full 
-                    hidden lg:block" />
+                    <span
+                      className="absolute -top-1 -right-12 w-2 h-2 bg-[#FFB057] rounded-full 
+                    hidden lg:block"
+                    />
                   )}
                 </div>
 
@@ -103,7 +107,7 @@ const AboutCompany: React.FC = () => {
                   {card.title}
                 </h3>
 
-                <p className="text-gray-500 text-[13px] leading-relaxed ">
+                <p className="text-gray-500 text-[15px] leading-relaxed ">
                   {card.description}
                 </p>
               </div>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Shield, Plane, ArrowUpRight, Star } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Shield, Plane, ArrowUpRight } from "lucide-react";
+import DynamicBadge from "../ReusableComponents/DynamicBadge";
 
 const servicesData = [
   {
@@ -75,10 +76,11 @@ const AboutServicesSection = () => {
 
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm">
+        {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm">
           <span className="text-[#113217] text-sm">✲</span>
           Our Services
-        </div>
+        </div> */}
+        <DynamicBadge title={"Our Services"} />
 
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 max-w-2xl leading-tight">
           Insurance services designed for your peace of mind
