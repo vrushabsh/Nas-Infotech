@@ -29,7 +29,7 @@ const AboutWatchOurVideo = () => {
         </div>
 
         {/* Main Heading (Fade In Up) */}
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4 leading-tight animate-fade-in-up [animation-delay:400ms]">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 leading-tight animate-fade-in-up [animation-delay:400ms]">
           Watch our journey and story
         </h1>
 

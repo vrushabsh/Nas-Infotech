@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import DynamicButton from "../ReusableComponents/DynamicButton";
 
 const HomeHeroSection: React.FC = () => {
   return (
@@ -47,12 +47,13 @@ const HomeHeroSection: React.FC = () => {
             </p>
             {/* Interactive CTA buttons combined closely */}
             <div className="pt-2">
-              <button className="group flex items-center bg-[#FFB057] hover:bg-[#e09c4d] text-black font-bold pl-6 pr-2 py-2 rounded-full text-sm tracking-wide transition-all duration-300 shadow-sm">
+              {/* <button className="group flex items-center bg-[#FFB057] hover:bg-[#e09c4d] text-black font-bold pl-6 pr-2 py-2 rounded-full text-sm tracking-wide transition-all duration-300 shadow-sm">
                 Get Free Quote
                 <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center ml-4 group-hover:rotate-45 transition-transform duration-300">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
-              </button>
+              </button> */}
+              <DynamicButton title={"Get Free Quote"} link={"http://localhost:5173/contact"}/>
             </div>
           </div>
         </div>

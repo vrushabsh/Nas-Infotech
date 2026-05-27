@@ -1,236 +1,260 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Quote, Star, Phone } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import DynamicBadge from "../ReusableComponents/DynamicBadge";
 
-const testimonials = [
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Rajesh Patel",
-    role: "Entrepreneur",
+    name: "Liam Harper",
+    role: "Dog Trainer",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    review:
-      "Their insurance plans are affordable and easy to manage. The claim process was quick, and the support team guided me every step of the way. I highly recommend their services.",
+    description:
+      "The photos were sharp, clean, and made our website look premium. They truly captured the essence of our brand.",
   },
   {
     id: 2,
-    name: "Amit Verma",
-    role: "Entrepreneur",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-    review:
-      "Their insurance plans are affordable and easy to manage. The claim process was quick, and the support team guided me every step of the way. I highly recommend their services.",
+    name: "Ethan Brooks",
+    role: "President of Sales",
+    image: "https://randomuser.me/api/portraits/men/43.jpg",
+    description:
+      "Their work brought a professional touch to our website and made it stand out instantly. The images perfectly reflected the personality of our brand. ",
   },
   {
     id: 3,
-    name: "Krisha Patel",
-    role: "Entrepreneur",
+    name: "Noah Bennett",
+    role: "Marketing Coordinator",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    description:
+      "We loved how clean and professional the final shots turned out for our business. Each image added authenticity and strengthened our brand identity.",
+  },
+  {
+    id: 4,
+    name: "Maya Collins",
+    role: "Nursing Assistant",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
-    review:
-      "Their insurance plans are affordable and easy to manage. The claim process was quick, and the support team guided me every step of the way. I highly recommend their services.",
+    description:
+      "The design exceeded our expectations and gave our brand a polished, modern feel. Every detail was captured beautifully with outstanding clarity and style.",
+  },
+  {
+    id: 5,
+    name: "Zoe Mitchell",
+    role: "Web Designer",
+    image: "https://randomuser.me/api/portraits/women/26.jpg",
+    description:
+      "The photos looked crisp, elegant,and elevated the overall appearance of our site.They managed to showcase our vision in the most creative way possible.",
+  },
+  {
+    id: 6,
+    name: "Ava Morgan",
+    role: "Medical Assistant",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    description:
+      "The visuals were stunning, high-quality,  and fit perfectly with our website theme.They truly understood our style and delivered beyond expectations.",
   },
 ];
 
-const cardVariants = {
-  hidden: {
+const slideVariants: Variants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 100 : -100,
     opacity: 0,
-    y: 60,
-  },
-
-  visible: (i) => ({
+  }),
+  center: {
+    x: 0,
     opacity: 1,
-    y: 0,
-
     transition: {
-      delay: i * 0.2,
-      duration: 0.8,
-      ease: "easeOut",
+      duration: 0.4,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+  exit: (direction: number) => ({
+    x: direction < 0 ? 100 : -100,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: [0.25, 1, 0.5, 1],
     },
   }),
 };
 
-const floatingAnimation = {
-  y: [0, -8, 0],
-
-  transition: {
-    duration: 4,
-    repeat: Infinity,
-    ease: "easeInOut",
-  },
-};
-
 const AboutTestimonialsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  // Calculates structural index offsets to safely handle infinite loop rendering
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1,
+    );
+  };
+
+  // Safe cyclic accessors mapping out 3 dynamic active display indices
+  const getActiveIndices = () => {
+    const len = testimonials.length;
+    const first = currentIndex;
+    const second = (currentIndex + 1) % len;
+    const third = (currentIndex + 2) % len;
+    return [first, second, third];
+  };
+
+  const visibleIndices = getActiveIndices();
+
   return (
-    <section className="relative overflow-hidden bg-[#f8f6f2] py-28 px-6 md:px-10">
+    <section className="relative overflow-hidden bg-[#F8FAFC] py-24 px-4 sm:px-6 lg:px-8 font-sans">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.05]">
+      <div className="absolute inset-0 opacity-[0.04]">
         <div
           className="w-full h-full"
           style={{
-            backgroundImage:
-              "radial-gradient(#000 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(#000 1px, transparent 1px)",
             backgroundSize: "22px 22px",
           }}
         />
       </div>
 
-      {/* Floating Dot */}
-      <motion.div
-        animate={{
-          y: [0, -15, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-        }}
-        className="absolute right-24 top-40 w-3 h-3 rounded-full bg-[#ffb95e]"
-      />
-
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <div className="flex items-center gap-2 border border-slate-200 bg-white px-5 py-2 rounded-full text-sm font-medium text-slate-700 shadow-sm">
-            <span className="text-green-700 text-base">✳</span>
-
-            Client Testimonials
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <DynamicBadge title={"Client Testimonials"} />
           </div>
-        </motion.div>
 
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-8"
-        >
-          <h2 className="text-[42px] md:text-[64px] font-bold text-[#0a0b35] leading-[1.08] tracking-[-1.5px]">
-            Hear from our happy clients
+          <h2 className="text-[#0a1118] text-3xl sm:text-5xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+            Hear from <span className="text-[#FFB057]">Our</span> happy{" "}
+            <span className="text-[#FFB057]">Clients</span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-slate-500 text-[17px] md:text-[18px] mt-5 leading-[1.8]">
-            Discover what our valued clients say about their experience with
-            our insurance services. Their feedback reflects our commitment to
-            reliable coverage, fast claim support.
+          <p className="max-w-3xl mx-auto text-slate-500 text-[15px] md:text-[16px] mt-6 leading-[1.9]">
+            Discover what our valued clients say about their experience with our
+            services. Their feedback reflects our commitment to quality,
+            reliability, and exceptional support.
           </p>
-        </motion.div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          {testimonials.map((item, index) => (
-            <motion.div
-              key={item.id}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              animate={floatingAnimation}
-              whileHover={{
-                y: -10,
-              }}
-              className="group bg-white rounded-[28px] px-10 py-12 shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 relative overflow-hidden"
-            >
-              {/* Top */}
-              <div className="relative flex justify-center mb-8">
-                <div className="relative">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md relative z-10"
-                  />
-
-                  <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-[#ffb95e] flex items-center justify-center">
-                    <Quote className="w-6 h-6 text-[#0a0b35] fill-[#0a0b35]" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Review */}
-              <p className="relative text-center text-slate-600 leading-[2rem] text-[17px]">
-                "{item.review}"
-              </p>
-
-              {/* Name */}
-              <div className="relative text-center mt-10">
-                <h3 className="text-[18px] md:text-[20px] font-bold text-[#0a0b35]">
-                  {item.name}
-                </h3>
-
-                <p className="text-slate-500 text-sm mt-2">
-                  {item.role}
-                </p>
-              </div>
-
-              {/* Bottom Line Animation */}
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
-                transition={{
-                  delay: 0.4 + index * 0.2,
-                  duration: 1,
-                }}
-                viewport={{ once: true }}
-                className="absolute bottom-0 left-0 h-[3px] bg-[#ffb95e]"
-              />
-            </motion.div>
-          ))}
         </div>
 
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center justify-center mt-16"
-        >
-          {/* Feedback */}
-          <div className="flex items-center gap-3 flex-wrap justify-center text-center">
-            <div className="flex items-center">
-              <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt=""
-                className="w-9 h-9 rounded-full border-2 border-white"
-              />
+        {/* CAROUSEL WRAPPER CONTAINER */}
+        <div className="relative px-2 sm:px-12">
+          {/* Main Cards Window */}
+          <div className="overflow-hidden py-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <AnimatePresence
+                initial={false}
+                mode="popLayout"
+                custom={direction}
+              >
+                {visibleIndices.map((itemIndex, structuralPosition) => {
+                  const item = testimonials[itemIndex];
+                  return (
+                    <motion.div
+                      key={`${item.id}-${structuralPosition}`}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      whileHover={{ y: -6 }}
+                      // Controls responsive breakpoints: Only show 2nd and 3rd slots above mobile layout viewports
+                      className={`group bg-white rounded-[28px] p-8 border border-slate-100/80 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
+                        structuralPosition === 1 ? "hidden sm:flex" : ""
+                      } ${structuralPosition === 2 ? "hidden md:flex" : ""}`}
+                    >
+                      <div>
+                        {/* Quote Handle Decorator */}
+                        <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#FFB057]/10 flex items-center justify-center">
+                          <Quote className="w-5 h-5 text-[#FFB057] fill-[#FFB057]" />
+                        </div>
 
-              <div className="-ml-2 w-9 h-9 rounded-full bg-[#0c3b1b] border-2 border-white flex items-center justify-center">
-                <Phone className="w-4 h-4 text-white" />
-              </div>
+                        {/* Profile Header */}
+                        <div className="flex items-center gap-3 mb-6">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md"
+                          />
+                          <div>
+                            <h3 className="text-[15px] font-bold text-slate-900 leading-none">
+                              {item.name}
+                            </h3>
+                            <p className="text-xs text-slate-400 mt-1">
+                              {item.role}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Stars */}
+                        <div className="flex items-center gap-0.5 mb-5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 fill-slate-900 stroke-slate-900"
+                            />
+                          ))}
+                        </div>
+
+                        {/* Review Content Strings */}
+                        <p className="text-[14px] text-slate-500 leading-[1.9]">
+                          {item.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
             </div>
-
-            <p className="text-slate-700 text-[16px]">
-              Hear genuine feedback from our valued and protected clients –
-              <span className="text-[#ffb95e] font-semibold cursor-pointer hover:underline ml-2">
-                View All Feedback
-              </span>
-            </p>
           </div>
 
-          {/* Ratings */}
-          <div className="flex items-center gap-3 mt-6 flex-wrap justify-center">
-            <span className="text-xl font-bold text-[#0a0b35]">
-              4.9/5
-            </span>
+          {/* CONTROLS (Floating Navigation Arrows) */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-[-15px] sm:left-[-20px] top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border border-slate-200/80 shadow-md flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-200"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
 
-            <div className="flex items-center text-[#ffb95e]">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 fill-current"
-                />
-              ))}
-            </div>
+          <button
+            onClick={handleNext}
+            className="absolute right-[-15px] sm:right-[-20px] top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border border-slate-200/80 shadow-md flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-200"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
 
-            <span className="text-lg font-semibold text-[#0a0b35]">
-              Over 2000 Reviews
-            </span>
-          </div>
-        </motion.div>
+        {/* PAGINATION DOTS INDICATOR */}
+        <div className="flex items-center justify-center gap-2 mt-12">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setDirection(index > currentIndex ? 1 : -1);
+                setCurrentIndex(index);
+              }}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "w-6 bg-[#FFB057]"
+                  : "w-2 bg-slate-300 hover:bg-slate-400"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
