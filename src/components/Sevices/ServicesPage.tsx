@@ -303,24 +303,21 @@ export default function ServicesPage() {
                 </h3>
 
                 {/* Description */}
-                <motion.div
-                  initial={{
-                    height: 0,
-                    opacity: 0,
-                  }}
-                  whileHover={{
-                    height: "auto",
-                    opacity: 1,
-                  }}
-                  transition={{
-                    duration: 0.4,
-                  }}
-                  className="overflow-hidden"
+                <div
+                  className="
+                    overflow-hidden
+                    max-h-0
+                    opacity-0
+                    group-hover:max-h-[200px]
+                    group-hover:opacity-100
+                    transition-all
+                    duration-500
+                  "
                 >
                   <p className="text-[14px] leading-[24px] text-[#666] mt-4">
                     {service.description}
                   </p>
-                </motion.div>
+                </div>
 
                 {/* Divider */}
                 <div className="w-full h-[1px] bg-gray-200 my-4" />
