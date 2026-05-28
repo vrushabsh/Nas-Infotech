@@ -19,6 +19,9 @@ const HomeContactUs: React.FC = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+
   // Handle value mapping from native input tracks safely
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -28,9 +31,40 @@ const HomeContactUs: React.FC = () => {
   };
 
   // Process system integration triggers on form dispatch
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Submitted Technical Consultation Payload:", formData);
+    setIsSubmitting(true);
+    try {
+      // 1. Point this URL to your running backend server location
+      const response = await fetch("http://localhost:5000/api/home", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Message submitted and sent successfully!");
+        // Clear form state inputs
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert(data.message || "Something went wrong on the server.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      alert("Could not connect to the mail server. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -193,9 +227,10 @@ const HomeContactUs: React.FC = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="bg-[#FFB057] hover:bg-[#e09c4d] text-black font-extrabold px-8 py-3.5 rounded-full text-xs sm:text-sm tracking-wide shadow-md transition-all duration-300"
-                >
-                  Submit Scope Requirements
+                  disabled={isSubmitting}
+                  className={`inline-flex items-center justify-center bg-[#FFB057] hover:bg-[#e09c4d] text-[#0a1118] font-black px-8 py-4 rounded-full text-sm tracking-wide transition-all duration-300 shadow-sm active:scale-[0.98] ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                    }`}>
+                  {isSubmitting ? "Submitting..." : "Submit Message"}
                 </button>
               </div>
             </form>

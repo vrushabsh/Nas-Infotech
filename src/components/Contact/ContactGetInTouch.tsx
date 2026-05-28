@@ -18,6 +18,9 @@ const ContactGetInTouch: React.FC = () => {
     message: "",
   });
 
+  // Track async submission states
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -25,10 +28,41 @@ const ContactGetInTouch: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitted Data:", formData);
-    // Add logic here to wire up to an API endpoint
+    setIsSubmitting(true);
+
+    try {
+      // 1. Point this URL to your running backend server location
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Message submitted and sent successfully!");
+        // Clear form state inputs
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          emailAddress: "",
+          message: "",
+        });
+      } else {
+        alert(data.message || "Something went wrong on the server.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      alert("Could not connect to the mail server. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -91,15 +125,13 @@ const ContactGetInTouch: React.FC = () => {
 
         {/* ================= 2. LOWER TWO-COLUMN SPLIT CONTAINER ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* --- LEFT SIDE: HEADERS & INTERACTIVE MAP MAPBOX --- */}
+          {/* --- LEFT SIDE: HEADERS & INTERACTIVE MAP --- */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-8">
-            {/* Badge Indicator */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f9f8f4] border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm">
               <span className="text-[#113217] text-sm">✲</span>
               Contact Us
             </div>
 
-            {/* Title & Subtext */}
             <div className="space-y-4">
               <h2 className="text-[#0a1118] text-3xl sm:text-4xl md:text-4xl font-black leading-[1.15] tracking-tight">
                 Let's talk about protecting what matters most
@@ -110,7 +142,6 @@ const ContactGetInTouch: React.FC = () => {
               </p>
             </div>
 
-            {/* Structured Google Maps Container Map Canvas Preview */}
             <div className="w-full aspect-[4/3] rounded-[12px] overflow-hidden shadow-sm border border-gray-200 relative group">
               <iframe
                 title="Office Location Map"
@@ -134,7 +165,6 @@ const ContactGetInTouch: React.FC = () => {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-              {/* Row 1: First Name & Last Name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label className="text-gray-800 text-xs sm:text-sm tracking-wide">
@@ -167,7 +197,6 @@ const ContactGetInTouch: React.FC = () => {
                 </div>
               </div>
 
-              {/* Row 2: Phone Number & Email Address */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label className="text-gray-800 text-xs sm:text-sm tracking-wide">
@@ -200,7 +229,6 @@ const ContactGetInTouch: React.FC = () => {
                 </div>
               </div>
 
-              {/* Row 3: Message Textbox Area */}
               <div className="space-y-2">
                 <label className="text-gray-800 text-xs sm:text-sm tracking-wide">
                   Message
@@ -215,13 +243,15 @@ const ContactGetInTouch: React.FC = () => {
                 />
               </div>
 
-              {/* Actions Footer Button */}
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center bg-[#FFB057] hover:bg-[#e09c4d] text-[#0a1118] font-black px-8 py-4 rounded-full text-sm tracking-wide transition-all duration-300 shadow-sm active:scale-[0.98]"
+                  disabled={isSubmitting}
+                  className={`inline-flex items-center justify-center bg-[#FFB057] hover:bg-[#e09c4d] text-[#0a1118] font-black px-8 py-4 rounded-full text-sm tracking-wide transition-all duration-300 shadow-sm active:scale-[0.98] ${
+                    isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
-                  Submit Message
+                  {isSubmitting ? "Submitting..." : "Submit Message"}
                 </button>
               </div>
             </form>
