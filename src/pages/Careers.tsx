@@ -7,7 +7,6 @@ import LifeAtNasInfotech from "../components/Careers/LifeAtNasInfotech";
 const Careers = () => {
   return (
     <div>
-    
       <CareerJobOpportunities />
       <CareerOurCulture />
       <LifeAtNasInfotech />

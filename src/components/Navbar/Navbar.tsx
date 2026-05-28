@@ -51,14 +51,14 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-0" : "bg-transparent py-2"
+        isScrolled ? "bg-white shadow-md py-0" : "bg-transparent"
       }`}
     >
       {/* Main Navigation Bar */}
       <nav
         className={`w-full transition-colors duration-300 ${isScrolled ? "border-b border-slate-100" : "border-b border-white/5"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 lg:py-5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 lg:py-2 flex items-center justify-between">
           
           {/* Brand Logo Wrapper */}
           <Link to="/" className="flex items-center cursor-pointer z-50 select-none shrink-0">

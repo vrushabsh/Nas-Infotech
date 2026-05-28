@@ -122,7 +122,10 @@ const CareerJobOpportunities = () => {
     : jobs.filter(job => job.category === activeCategory);
 
   return (
-    <div className="min-h-screen mt-5 bg-[#F9F8F6] text-[#101828] font-sans antialiased selection:bg-rose-100 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#F9F8F6] text-[#101828] font-sans antialiased selection:bg-rose-100 relative overflow-x-hidden">
+
+      {/* FIX: Dark overlay backdrop block behind your Global Navbar */}
+      <div className="absolute top-0 left-0 right-0 h-[90px] bg-gradient-to-b from-black/80 via-black/50 to-transparent pointer-events-none z-10" />
 
       {/* Decorative Blur Background element */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-rose-200/40 via-orange-100/30 to-transparent rounded-full blur-3xl pointer-events-none z-0" />
@@ -146,8 +149,6 @@ const CareerJobOpportunities = () => {
             <p className="text-[#475467] text-lg sm:text-xl leading-relaxed font-normal mb-8">
               Find your next career step. We're looking for passionate individuals to join our global team. Explore open roles across engineering, management, and product design.
             </p>
-
-
           </section>
 
           {/* Right Image Column */}
@@ -160,6 +161,7 @@ const CareerJobOpportunities = () => {
           </section>
 
         </div>
+
         {/* Categories Horizontal Filter */}
         <section className="mb-10 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex flex-nowrap sm:flex-wrap items-center gap-2.5 pb-2">
@@ -240,7 +242,7 @@ const CareerJobOpportunities = () => {
                   </div>
                 </div>
 
-                {/* Custom Stylized Apply Button styled like the Contact Us image asset */}
+                {/* Custom Stylized Apply Button */}
                 <button
                   onClick={() => setSelectedJob(job)}
                   className="w-full md:w-auto inline-flex items-center justify-between gap-6 bg-[#ffb066] hover:bg-[#ffa04d] text-neutral-900 font-bold py-2 pl-6 pr-2 rounded-full transition-all duration-200 group-hover:translate-x-0.5 active:scale-98 shadow-sm cursor-pointer"
