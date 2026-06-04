@@ -90,15 +90,6 @@ const AboutFeatureSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mt-10"
         >
-          {/* <button className="group flex items-center overflow-hidden rounded-full shadow-2xl">
-            <span className="bg-[#ffb95e] text-black px-8 py-4 text-lg font-semibold">
-              Contact Us
-            </span>
-
-            <span className="bg-[#ffb95e] px-5 py-4 flex items-center justify-center border-l border-black/10">
-              <ArrowUpRight className="w-6 h-6 transition-transform duration-300 group-hover:rotate-45" />
-            </span>
-          </button> */}
           <DynamicButton
             title={"Contact Us"}
             link={"http://localhost:5173/contact"}
@@ -240,23 +231,6 @@ const AboutFeatureSection = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Footer Line */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center text-white text-lg"
-        >
-          <span className="bg-[#ffb95e] text-black px-4 py-1 rounded-full font-semibold mr-3">
-            Free
-          </span>
-          Smart, Scalable, and High-Performance Insurance Company —
-          <span className="text-[#ffb95e] font-semibold cursor-pointer hover:underline ml-2">
-            Let’s Build Together!
-          </span>
-        </motion.div> */}
       </div>
     </section>
   );

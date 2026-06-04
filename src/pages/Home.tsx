@@ -5,6 +5,7 @@ import HomeCoreFeatures from "../components/Home/HomeCoreFeatures";
 import HomeFAQ from "../components/Home/HomeFAQ";
 import HomeHeroSection from "../components/Home/HomeHeroSection";
 import HomeKeyStrengths from "../components/Home/HomeKeyStrengths";
+import HomeServices from "../components/Home/HomeServices";
 import HomeWhatWeDo from "../components/Home/HomeWhatWeDo";
 import HomeWhyChooseUs from "../components/Home/HomeWhyChooseUs";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <div>
         <HomeHeroSection />
         <HomeAboutUs />
+        <HomeServices />
         <HomeKeyStrengths />
         <HomeWhyChooseUs />
         <HomeWhatWeDo />
