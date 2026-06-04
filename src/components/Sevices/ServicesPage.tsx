@@ -5,75 +5,88 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Imported React Router Link
 
 const services = [
   {
+    id: "software-development",
     title: "Software Development",
     description:
       "We deliver innovative software tailored to your business needs. Trust us for reliable, high-quality development that ensures your success.",
     image: "/Services/Services-Software Development.webp",
   },
   {
+    id: "ai-and-ml",
     title: "Artificial Intelligence and ML",
     description:
       "Harness the power of AI and ML to transform your business operations with advanced automation and intelligent systems.",
     image: "/Services/Services-AI and ML.webp",
   },
   {
+    id: "salesforce",
     title: "Salesforce Services",
     description:
       "Optimize your customer relationship management with scalable Salesforce ecosystem solutions.",
     image: "/Services/Services-Salesforce services.webp",
   },
   {
+    id: "bi-and-analytics",
     title: "BI and Analytics",
     description:
       "Empower data-driven decision-making with modern analytics and visualization tools.",
     image: "/Services/pic-1.webp",
   },
   {
+    id: "cloud-computing",
     title: "Cloud Computing",
     description:
       "Unlock scalable infrastructure with secure cloud-native transformation strategies.",
     image: "/Services/Services-Cloud Computing.webp",
   },
   {
+    id: "testing-and-qa",
     title: "Software Testing and QA",
     description:
       "Ensure flawless digital experiences with robust QA automation and testing systems.",
     image: "/Services/Services-Software Testing and QA.webp",
   },
   {
+    id: "devops",
     title: "DevOps",
     description:
       "Accelerate deployment cycles using CI/CD pipelines and infrastructure automation.",
     image: "/Services/Services-Deveops.webp",
   },
   {
+    id: "big-data-and-analytics",
     title: "Big Data Analytics",
     description:
       "Transform raw data into meaningful business intelligence using scalable analytics.",
     image: "/Services/Services-Big data analytics.webp",
   },
   {
+    id: "web-development",
     title: "Web Development",
     description:
       "Craft premium modern web experiences optimized for performance and scalability.",
     image: "/Services/Services-Web Development.jpeg",
   },
   {
+    id: "digital-marketing",
     title: "Digital Marketing",
     description:
       "Expand your online reach with strategic digital campaigns and SEO growth.",
     image: "/Services/Services-Digital Marketing.jpeg",
   },
   {
+    id: "cyber-security",
     title: "Cyber Security",
     description:
       "Protect digital infrastructure with advanced cybersecurity and threat prevention.",
     image: "/Services/Services-Cyber Security.webp",
   },
   {
+    id: "product-development",
     title: "Product Development",
     description:
       "Build scalable enterprise-grade products using agile engineering methodologies.",
@@ -322,44 +335,46 @@ export default function ServicesPage() {
                 {/* Divider */}
                 <div className="w-full h-[1px] bg-gray-200 my-4" />
 
-                {/* CTA */}
-                <motion.div
-                  whileHover={{
-                    x: 4,
-                  }}
-                  className="flex items-center justify-between"
-                >
-
-                  <span className="text-[15px] font-semibold text-[#0a123d]">
-                    Learn More
-                  </span>
-
+                {/* CTA / LINK ANCHOR */}
+                <Link to={`/services/${service.id}`}>
                   <motion.div
                     whileHover={{
-                      rotate: 45,
-                      scale: 1.08,
+                      x: 4,
                     }}
-                    transition={{
-                      duration: 0.3,
-                    }}
-                    className="
-                      w-10
-                      h-10
-                      rounded-full
-                      bg-[#FFB057]
-                      flex
-                      items-center
-                      justify-center
-                      shadow-md
-                    "
+                    className="flex items-center justify-between cursor-pointer"
                   >
-                    <ArrowUpRight
-                      size={18}
-                      className="text-[#0a123d]"
-                    />
-                  </motion.div>
 
-                </motion.div>
+                    <span className="text-[15px] font-semibold text-[#0a123d] hover:text-[#FFB057] transition-colors">
+                      Learn More
+                    </span>
+
+                    <motion.div
+                      whileHover={{
+                        rotate: 45,
+                        scale: 1.08,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                      }}
+                      className="
+                        w-10
+                        h-10
+                        rounded-full
+                        bg-[#FFB057]
+                        flex
+                        items-center
+                        justify-center
+                        shadow-md
+                      "
+                    >
+                      <ArrowUpRight
+                        size={18}
+                        className="text-[#0a123d]"
+                      />
+                    </motion.div>
+
+                  </motion.div>
+                </Link>
 
               </motion.div>
 
