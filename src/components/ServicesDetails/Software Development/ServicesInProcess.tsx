@@ -69,14 +69,6 @@ export default function ServicesInProcess() {
           {/* Header Block Section */}
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end border-b border-white/10 pb-12 mb-12">
             <div className="lg:col-span-7 space-y-4">
-              {/* Top Micro Badge */}
-              <div className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 shadow-inner">
-                <span className="text-[#ffb057] text-xs font-semibold">✳</span>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-white/80">
-                  6 Simple Steps
-                </span>
-              </div>
-
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-white">
                 Simple process for fast and <br className="hidden sm:inline" />{" "}
                 secure development
