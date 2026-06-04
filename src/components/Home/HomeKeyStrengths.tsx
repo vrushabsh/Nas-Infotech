@@ -8,12 +8,14 @@ import type { Swiper as SwiperType } from "swiper";
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import DynamicButton from "../ReusableComponents/DynamicButton";
+import DynamicBadge from "../ReusableComponents/DynamicBadge";
 
 interface FeatureItem {
   id: number;
   title: string;
   description: string;
- imageUrl: string;
+  imageUrl: string;
 }
 
 /* ================= PREMIUM ANIMATIONS ================= */
@@ -131,7 +133,6 @@ const HomeKeyStrengths: React.FC = () => {
       }}
       viewport={{ once: true }}
     >
-
       {/* ================= CUSTOM SWIPER STYLES ================= */}
       <style>{`
         .custom-dots-container {
@@ -174,35 +175,22 @@ const HomeKeyStrengths: React.FC = () => {
           },
         }}
       >
-
         {/* ================= TOP CONTENT ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 xl:gap-16 items-end mb-12 sm:mb-16 lg:mb-20">
-
           {/* LEFT SIDE */}
           <motion.div
             className="lg:col-span-6 space-y-4 sm:space-y-5"
             variants={blurReveal}
           >
-
             {/* Badge */}
-            <motion.div
-              variants={blurReveal}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs sm:text-sm font-semibold tracking-wide text-gray-800 shadow-sm"
-            >
-              <span className="text-[#113217] text-sm">✿</span>
-              Key Strengths
+            <motion.div variants={blurReveal}>
+              <DynamicBadge title="Key Strengths" />
             </motion.div>
 
             {/* Heading */}
-            <motion.div
-              variants={blurReveal}
-              className="overflow-hidden"
-            >
+            <motion.div variants={blurReveal} className="overflow-hidden">
               <h2 className="text-[#0a1118] text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight">
-                Discover{" "}
-                <span className="text-[#FFB057]">
-                  Unique Features
-                </span>{" "}
+                Discover <span className="text-[#FFB057]">Unique Features</span>{" "}
                 are Designed to Enhance.
               </h2>
             </motion.div>
@@ -222,26 +210,23 @@ const HomeKeyStrengths: React.FC = () => {
               productivity.
             </motion.p>
 
-            <motion.div
-              variants={blurReveal}
-              className="pt-2"
-            >
-              <button className="group flex items-center bg-[#FFB057] hover:bg-[#e09c4d] text-black font-bold pl-6 pr-2 py-2 rounded-full text-sm tracking-wide transition-all duration-500 shadow-sm">
+            <motion.div variants={blurReveal} className="pt-2">
+              {/* <button className="group flex items-center bg-[#FFB057] hover:bg-[#e09c4d] text-black font-bold pl-6 pr-2 py-2 rounded-full text-sm tracking-wide transition-all duration-500 shadow-sm">
                 View All Features
-
                 <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center ml-4 group-hover:rotate-45 transition-transform duration-500">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
-              </button>
+              </button> */}
+              <DynamicButton
+                title="View All Features"
+                link="http://localhost:5173/contact"
+              />
             </motion.div>
           </motion.div>
         </div>
 
         {/* ================= SWIPER SECTION ================= */}
-        <motion.div
-          className="w-full relative px-1"
-          variants={blurReveal}
-        >
+        <motion.div className="w-full relative px-1" variants={blurReveal}>
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             modules={[Pagination]}
@@ -258,10 +243,8 @@ const HomeKeyStrengths: React.FC = () => {
             }}
             className="!overflow-visible"
           >
-
             {features.map((feature, index) => (
               <SwiperSlide key={feature.id} className="h-auto py-2">
-
                 <motion.div
                   variants={imageReveal}
                   initial="hidden"
@@ -280,7 +263,6 @@ const HomeKeyStrengths: React.FC = () => {
                   }}
                   className="relative group w-full aspect-[4/5] rounded-[24px] overflow-hidden shadow-sm bg-white border-4 border-white transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.18)] flex flex-col justify-between"
                 >
-
                   {/* Image */}
                   <div className="w-full h-full overflow-hidden">
                     <img
@@ -295,7 +277,6 @@ const HomeKeyStrengths: React.FC = () => {
                     variants={blurReveal}
                     className="absolute bottom-3 left-3 right-3 bg-white rounded-[20px] p-5 sm:p-6 shadow-lg border border-gray-100 transition-all duration-500 transform group-hover:translate-y-[-4px] max-h-[85%] overflow-y-auto custom-scrollbar"
                   >
-
                     <motion.h3
                       variants={blurReveal}
                       className="text-[#0a1118] text-xl font-bold tracking-tight mb-2"
@@ -310,7 +291,6 @@ const HomeKeyStrengths: React.FC = () => {
                       {feature.description}
                     </motion.p>
                   </motion.div>
-
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -318,13 +298,9 @@ const HomeKeyStrengths: React.FC = () => {
         </motion.div>
 
         {/* ================= PAGINATION ================= */}
-        <motion.div
-          className="flex justify-center mt-12"
-          variants={blurReveal}
-        >
+        <motion.div className="flex justify-center mt-12" variants={blurReveal}>
           <div className="custom-dots-container" />
         </motion.div>
-
       </motion.div>
     </motion.section>
   );
