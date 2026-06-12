@@ -11,5 +11,5 @@ const Industries = () => {
     </div>
   );
 };
-
+    
 export default Industries;
