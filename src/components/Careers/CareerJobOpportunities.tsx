@@ -18,6 +18,17 @@ interface Job {
 const CareerJobOpportunities = () => {
   const [activeCategory, setActiveCategory] = useState('View all');
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [applyingJob, setApplyingJob] = useState<Job | null>(null);
+
+  // Application form fields state management
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    mobileNumber: '',
+    designation: '',
+    experience: '',
+    resume: null as File | null
+  });
 
   const categories = [
     'View all',
@@ -26,7 +37,7 @@ const CareerJobOpportunities = () => {
     'Management'
   ];
 
-  const jobs = [
+  const jobs: Job[] = [
     {
       id: 1,
       title: 'Software Engineer',
@@ -117,6 +128,26 @@ const CareerJobOpportunities = () => {
     }
   ];
 
+  // Helper function to auto-populate fields when opening the modal form
+  const handleOpenApplyForm = (job: Job) => {
+    setSelectedJob(null); // Clear detail modal overlay view
+    setFormData({
+      fullName: '',
+      email: '',
+      mobileNumber: '',
+      designation: job.title,
+      experience: job.experience,
+      resume: null
+    });
+    setApplyingJob(job);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Application submitted successfully for ${applyingJob?.title}!`);
+    setApplyingJob(null);
+  };
+
   const filteredJobs = activeCategory === 'View all'
     ? jobs
     : jobs.filter(job => job.category === activeCategory);
@@ -124,7 +155,7 @@ const CareerJobOpportunities = () => {
   return (
     <div className="min-h-screen bg-[#F9F8F6] text-[#101828] font-sans antialiased selection:bg-rose-100 relative overflow-x-hidden">
 
-      {/* FIX: Dark overlay backdrop block behind your Global Navbar */}
+      {/* Dark overlay backdrop block behind your Global Navbar */}
       <div className="absolute top-0 left-0 right-0 h-[90px] bg-gradient-to-b from-black/80 via-black/50 to-transparent pointer-events-none z-10" />
 
       {/* Decorative Blur Background element */}
@@ -135,17 +166,14 @@ const CareerJobOpportunities = () => {
 
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
-
           {/* Left Content Column */}
           <section className="w-full md:w-[60%] flex flex-col items-start justify-center">
             <span className="inline-flex items-center px-3 py-1 text-xs font-semibold tracking-wide border border-neutral-300 rounded-full text-neutral-800 bg-white/50 backdrop-blur-sm mb-6 shadow-sm">
               We're hiring!
             </span>
-
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#101828] mb-5 leading-[1.15]">
               Job Opportunities For You
             </h1>
-
             <p className="text-[#475467] text-lg sm:text-xl leading-relaxed font-normal mb-8">
               Find your next career step. We're looking for passionate individuals to join our global team. Explore open roles across engineering, management, and product design.
             </p>
@@ -159,7 +187,6 @@ const CareerJobOpportunities = () => {
               className="w-[80%] max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain mx-auto"
             />
           </section>
-
         </div>
 
         {/* Categories Horizontal Filter */}
@@ -225,26 +252,34 @@ const CareerJobOpportunities = () => {
                     )}
                   </div>
 
-                  {/* Meta metadata badges */}
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-250 rounded-full shadow-2xs">
+                  {/* Badges metadata with "Read more" button added directly beside them */}
+                  <div className="flex flex-wrap items-center gap-2 pt-1">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-200 rounded-full shadow-2xs">
                       <MapPin size={13} className="text-gray-400" />
                       {job.location}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-250 rounded-full shadow-2xs">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-200 rounded-full shadow-2xs">
                       <Clock size={13} className="text-gray-400" />
                       {job.type}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-250 rounded-full shadow-2xs">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#344054] bg-white border border-neutral-200 rounded-full shadow-2xs">
                       <Briefcase size={13} className="text-gray-400" />
                       {job.experience}
                     </span>
+                    
+                    {/* Handled custom addition request: Read More action badge aligned right alongside indicators */}
+                    <button
+                      onClick={() => setSelectedJob(job)}
+                      className="inline-flex items-center justify-center px-3 py-1 text-xs font-bold text-white bg-[#ffb066] hover:bg-[#ffa04d] rounded-full shadow-2xs transition-colors cursor-pointer active:scale-95 ml-1"
+                    >
+                      Read More
+                    </button>
                   </div>
                 </div>
 
-                {/* Custom Stylized Apply Button */}
+                {/* Main Apply Button row */}
                 <button
-                  onClick={() => setSelectedJob(job)}
+                  onClick={() => handleOpenApplyForm(job)}
                   className="w-full md:w-auto inline-flex items-center justify-between gap-6 bg-[#ffb066] hover:bg-[#ffa04d] text-neutral-900 font-bold py-2 pl-6 pr-2 rounded-full transition-all duration-200 group-hover:translate-x-0.5 active:scale-98 shadow-sm cursor-pointer"
                 >
                   <span className="tracking-wide text-[15px]">Apply Now</span>
@@ -268,7 +303,7 @@ const CareerJobOpportunities = () => {
         </section>
       </main>
 
-      {/* Detailed Dynamic Modal Drawer Overlay for Application */}
+      {/* Job Details Modal - Triggers when clicking "Read More" */}
       {selectedJob && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center z-50 p-4 animate-fade-in">
           <div className="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 relative shadow-xl max-h-[90vh] overflow-y-auto">
@@ -317,10 +352,104 @@ const CareerJobOpportunities = () => {
                   <p className="text-sm text-neutral-700 font-medium mt-0.5">{selectedJob.education}</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
 
+      {/* Styled Job Application Form Modal - Triggers when clicking "Apply Now" */}
+      {applyingJob && (
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 relative shadow-xl max-h-[95vh] overflow-y-auto">
+            <button
+              onClick={() => setApplyingJob(null)}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              <X size={20} />
+            </button>
+
+            <h2 className="text-2xl font-bold text-center text-[#101828] mb-6">Job Application form</h2>
+
+            <form onSubmit={handleFormSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Full Name</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter name"
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Email Address</label>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Mobile number</label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="Enter mobile number"
+                  value={formData.mobileNumber}
+                  onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
+                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Designation</label>
+                <input
+                  type="text"
+                  disabled
+                  value={formData.designation}
+                  className="w-full px-4 py-2 border border-neutral-200 rounded-lg text-sm bg-neutral-100 text-neutral-500 cursor-not-allowed"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Years of Experience</label>
+                <input
+                  type="text"
+                  disabled
+                  value={formData.experience}
+                  className="w-full px-4 py-2 border border-neutral-200 rounded-lg text-sm bg-neutral-100 text-neutral-500 cursor-not-allowed"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">Your Resume</label>
+                <div className="flex items-center justify-between border border-neutral-300 rounded-lg px-4 py-2 bg-neutral-50/50 text-sm">
+                  <input
+                    type="file"
+                    required
+                    id="resume-upload"
+                    onChange={(e) => setFormData({ ...formData, resume: e.target.files ? e.target.files[0] : null })}
+                    className="hidden"
+                  />
+                  <label htmlFor="resume-upload" className="bg-neutral-200 hover:bg-neutral-300 px-3 py-1 rounded border border-neutral-400 text-xs text-neutral-700 font-medium cursor-pointer transition-colors">
+                    Choose Files
+                  </label>
+                  <span className="text-neutral-400 text-xs truncate max-w-[200px]">
+                    {formData.resume ? formData.resume.name : 'No file chosen'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Injected buttons from the read tab overlay right over here */}
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => alert(`Applied Successfully for ${selectedJob.title}!`)}
+                  type="submit"
                   className="flex-1 inline-flex items-center justify-center gap-4 bg-[#ffb066] hover:bg-[#ffa04d] text-neutral-900 font-bold py-3 px-6 rounded-xl transition-colors shadow-sm cursor-pointer"
                 >
                   <span className="tracking-wide">Submit Application</span>
@@ -329,18 +458,19 @@ const CareerJobOpportunities = () => {
                   </div>
                 </button>
                 <button
-                  onClick={() => setSelectedJob(null)}
+                  type="button"
+                  onClick={() => setApplyingJob(null)}
                   className="px-5 py-3 border border-neutral-300 text-neutral-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors cursor-pointer"
                 >
                   Cancel
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       )}
 
-      {/* Styled utilities injection for layout behavior */}
+      {/* Styled utilities injection */}
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
