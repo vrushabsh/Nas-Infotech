@@ -1,0 +1,2005 @@
+{
+  "services": [
+    {
+      "id": 1,
+      
+      "slug": "software-development",
+      "serviceName": "Custom Software Development Solutions",
+      "tagline": "Building Scalable Digital Products",
+      "image": "/Services/Services-Software Development.webp",
+      "hero": {
+        "title": "Custom Software Development Solutions",
+        "description": "Transform your business ideas into powerful, scalable, and secure software applications. Our custom software development services help organizations streamline operations, improve customer experiences, and accelerate digital transformation with innovative technology solutions.",
+        "primaryCTA": "Get Started",
+        "secondaryCTA": "Talk to an Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "We provide end-to-end software development services tailored to your unique business requirements. From initial planning and architecture design to development, deployment, and ongoing support, our team delivers high-quality software solutions that drive growth and operational efficiency.",
+        "capabilities": [
+          "Custom Web Application Development",
+          "Enterprise Software Solutions",
+          "API Development & Integration",
+          "Cloud-Native Application Development",
+          "Legacy System Modernization",
+          "Software Maintenance & Support"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Custom Application Development",
+            "description": "Tailored software solutions designed specifically for your business processes and goals."
+          },
+          {
+            "title": "Scalable Architecture",
+            "description": "Future-ready applications built to handle growing business demands and user traffic."
+          },
+          {
+            "title": "API Integration",
+            "description": "Seamlessly connect your software with third-party tools, platforms, and services."
+          },
+          {
+            "title": "Cloud-Ready Solutions",
+            "description": "Develop applications optimized for modern cloud environments and infrastructure."
+          },
+          {
+            "title": "Security-First Development",
+            "description": "Implement robust security measures to protect sensitive business and customer data."
+          },
+          {
+            "title": "Agile Development Process",
+            "description": "Rapid delivery cycles with continuous collaboration, testing, and improvements."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Frontend",
+            "items": [
+              "React",
+              "Next.js",
+              "Angular",
+              "Vue.js",
+              "TypeScript",
+              "Tailwind CSS"
+            ]
+          },
+          {
+            "name": "Backend",
+            "items": ["Node.js", "Express.js", "Python", "Java", ".NET", "PHP"]
+          },
+          {
+            "name": "Database",
+            "items": [
+              "MongoDB",
+              "MySQL",
+              "PostgreSQL",
+              "SQL Server",
+              "Firebase"
+            ]
+          },
+          {
+            "name": "Cloud & DevOps",
+            "items": [
+              "AWS",
+              "Microsoft Azure",
+              "Google Cloud",
+              "Docker",
+              "Kubernetes",
+              "GitHub Actions"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Increased Productivity",
+            "description": "Automate repetitive tasks and improve operational efficiency."
+          },
+          {
+            "title": "Business Scalability",
+            "description": "Software designed to grow alongside your business requirements."
+          },
+          {
+            "title": "Enhanced Security",
+            "description": "Protect business-critical data with modern security practices."
+          },
+          {
+            "title": "Cost Optimization",
+            "description": "Reduce manual processes and operational expenses through automation."
+          },
+          {
+            "title": "Improved User Experience",
+            "description": "Deliver seamless digital experiences for customers and employees."
+          },
+          {
+            "title": "Faster Time-to-Market",
+            "description": "Launch products and features quickly with agile development methodologies."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Healthcare",
+            "description": "Secure healthcare applications, patient management systems, and telemedicine solutions."
+          },
+          {
+            "name": "Finance",
+            "description": "FinTech platforms, banking software, and secure financial management systems."
+          },
+          {
+            "name": "E-Commerce",
+            "description": "Custom online stores, marketplaces, and digital commerce platforms."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Production management, inventory tracking, and process automation solutions."
+          },
+          {
+            "name": "Education",
+            "description": "Learning management systems, e-learning platforms, and student portals."
+          },
+          {
+            "name": "Logistics",
+            "description": "Fleet management, shipment tracking, and supply chain optimization software."
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "artificial-intelligence-machine-learning",
+      "serviceName": "Artificial Intelligence & Machine Learning Services",
+      "tagline": "Intelligent Solutions for Smarter Business",
+      "image": "/Services/Services-AI and ML.webp",
+      "hero": {
+        "title": "Artificial Intelligence & Machine Learning Services",
+        "description": "Leverage the power of Artificial Intelligence and Machine Learning to automate processes, uncover valuable insights, improve decision-making, and create innovative customer experiences. We help businesses transform data into intelligent actions that drive measurable growth.",
+        "primaryCTA": "Start Your AI Journey",
+        "secondaryCTA": "Schedule a Consultation"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our AI and Machine Learning services empower organizations to harness data-driven intelligence for operational efficiency and business innovation. From predictive analytics and intelligent automation to natural language processing and computer vision, we deliver tailored AI solutions that solve real-world challenges.",
+        "capabilities": [
+          "Machine Learning Model Development",
+          "Predictive Analytics Solutions",
+          "Natural Language Processing (NLP)",
+          "Computer Vision Applications",
+          "AI-Powered Automation",
+          "Recommendation Systems"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Predictive Analytics",
+            "description": "Forecast business trends, customer behavior, and operational outcomes using advanced machine learning models."
+          },
+          {
+            "title": "Intelligent Automation",
+            "description": "Automate repetitive tasks and business workflows with AI-driven decision-making systems."
+          },
+          {
+            "title": "Natural Language Processing",
+            "description": "Enable chatbots, virtual assistants, sentiment analysis, and text processing capabilities."
+          },
+          {
+            "title": "Computer Vision",
+            "description": "Extract insights from images and videos through object detection, recognition, and visual analysis."
+          },
+          {
+            "title": "Recommendation Engines",
+            "description": "Deliver personalized experiences and product recommendations based on user behavior."
+          },
+          {
+            "title": "AI Integration",
+            "description": "Seamlessly integrate AI capabilities into existing business applications and workflows."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "AI Frameworks",
+            "items": [
+              "TensorFlow",
+              "PyTorch",
+              "Keras",
+              "Scikit-Learn",
+              "OpenCV"
+            ]
+          },
+          {
+            "name": "Programming Languages",
+            "items": ["Python", "R", "Java", "JavaScript"]
+          },
+          {
+            "name": "Data Processing",
+            "items": ["Pandas", "NumPy", "Apache Spark", "Hadoop"]
+          },
+          {
+            "name": "Cloud AI Platforms",
+            "items": [
+              "AWS AI Services",
+              "Google Vertex AI",
+              "Azure AI",
+              "OpenAI",
+              "Amazon SageMaker"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Smarter Decision Making",
+            "description": "Gain actionable insights from business data to make informed strategic decisions."
+          },
+          {
+            "title": "Operational Efficiency",
+            "description": "Reduce manual effort through intelligent automation and optimized workflows."
+          },
+          {
+            "title": "Improved Customer Experience",
+            "description": "Deliver personalized interactions and recommendations to customers."
+          },
+          {
+            "title": "Revenue Growth",
+            "description": "Identify new opportunities and optimize business performance through predictive intelligence."
+          },
+          {
+            "title": "Competitive Advantage",
+            "description": "Stay ahead of the competition by adopting innovative AI-powered solutions."
+          },
+          {
+            "title": "Scalable Intelligence",
+            "description": "Deploy AI systems that grow with your business and evolving data requirements."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Healthcare",
+            "description": "AI-powered diagnostics, patient analytics, and healthcare automation solutions."
+          },
+          {
+            "name": "Finance",
+            "description": "Fraud detection, risk assessment, algorithmic trading, and financial forecasting."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Personalized recommendations, demand forecasting, and customer behavior analysis."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Predictive maintenance, quality control, and production optimization."
+          },
+          {
+            "name": "Logistics",
+            "description": "Route optimization, demand prediction, and supply chain intelligence."
+          },
+          {
+            "name": "Telecommunications",
+            "description": "Network optimization, customer analytics, and AI-driven support systems."
+          }
+        ]
+      }
+    },
+    { 
+      "id": 3,
+      "slug": "salesforce-consulting-implementation",
+      "serviceName": "Salesforce Consulting & Implementation Services",
+      "tagline": "Transform Customer Relationships with Salesforce",
+      "image": "/Services/Services-Salesforce services.webp",
+      "hero": {
+        "title": "Salesforce Consulting & Implementation Services",
+        "description": "Maximize the value of your Salesforce investment with expert consulting, implementation, customization, and support services. We help businesses streamline operations, improve customer engagement, and accelerate growth through tailored Salesforce solutions.",
+        "primaryCTA": "Get Salesforce Consultation",
+        "secondaryCTA": "Talk to an Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our Salesforce experts help organizations design, implement, customize, and optimize Salesforce solutions that align with business objectives. Whether you're adopting Salesforce for the first time or enhancing an existing ecosystem, we deliver scalable CRM solutions that improve productivity and customer experiences.",
+        "capabilities": [
+          "Salesforce Implementation",
+          "CRM Strategy & Consulting",
+          "Sales Cloud & Service Cloud",
+          "Custom Salesforce Development",
+          "Salesforce Integration Services",
+          "Ongoing Salesforce Support"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Salesforce Implementation",
+            "description": "Deploy Salesforce efficiently with a structured implementation approach tailored to your business."
+          },
+          {
+            "title": "Custom CRM Development",
+            "description": "Extend Salesforce functionality through custom workflows, dashboards, and applications."
+          },
+          {
+            "title": "Third-Party Integrations",
+            "description": "Connect Salesforce with ERP systems, marketing platforms, and business applications."
+          },
+          {
+            "title": "Process Automation",
+            "description": "Automate repetitive business processes to improve productivity and reduce manual effort."
+          },
+          {
+            "title": "Data Migration",
+            "description": "Securely migrate data from legacy systems into Salesforce with minimal disruption."
+          },
+          {
+            "title": "Analytics & Reporting",
+            "description": "Gain actionable insights through advanced reporting and real-time dashboards."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Salesforce Platforms",
+            "items": [
+              "Sales Cloud",
+              "Service Cloud",
+              "Marketing Cloud",
+              "Commerce Cloud",
+              "Experience Cloud"
+            ]
+          },
+          {
+            "name": "Development",
+            "items": [
+              "Apex",
+              "Lightning Web Components",
+              "Visualforce",
+              "Salesforce DX"
+            ]
+          },
+          {
+            "name": "Integration Tools",
+            "items": ["MuleSoft", "REST APIs", "SOAP APIs", "Zapier"]
+          },
+          {
+            "name": "Analytics",
+            "items": ["Tableau", "Salesforce Reports", "Einstein Analytics"]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Improved Customer Relationships",
+            "description": "Centralize customer information and deliver personalized experiences."
+          },
+          {
+            "title": "Enhanced Productivity",
+            "description": "Automate workflows and empower teams with efficient processes."
+          },
+          {
+            "title": "Data-Driven Decisions",
+            "description": "Access real-time insights to make informed business decisions."
+          },
+          {
+            "title": "Scalable CRM Platform",
+            "description": "Support business growth with flexible and scalable Salesforce solutions."
+          },
+          {
+            "title": "Increased Revenue",
+            "description": "Optimize sales processes and improve customer retention."
+          },
+          {
+            "title": "Seamless Collaboration",
+            "description": "Enable teams to work together efficiently through a unified platform."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Financial Services",
+            "description": "Customer engagement and relationship management solutions for financial institutions."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Patient engagement and operational efficiency through CRM automation."
+          },
+          {
+            "name": "Retail",
+            "description": "Improve customer experiences and drive sales with intelligent CRM systems."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Streamline sales operations and partner relationship management."
+          },
+          {
+            "name": "Education",
+            "description": "Student engagement and enrollment management solutions."
+          },
+          {
+            "name": "Technology",
+            "description": "Accelerate growth through customer-centric sales and support processes."
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "slug": "business-intelligence-analytics",
+      "serviceName": "Business Intelligence & Analytics Solutions",
+      "tagline": "Turn Data into Strategic Business Insights",
+      "image": "/Services/pic-1.webp",
+
+      "hero": {
+        "title": "Business Intelligence & Analytics Solutions",
+        "description": "Unlock the full potential of your business data with advanced Business Intelligence and Analytics solutions. We help organizations transform raw data into actionable insights, enabling smarter decisions, improved performance, and sustainable growth.",
+        "primaryCTA": "Explore BI Solutions",
+        "secondaryCTA": "Talk to an Analytics Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our Business Intelligence and Analytics services empower organizations to collect, analyze, and visualize data from multiple sources. We deliver customized dashboards, reports, and predictive insights that help businesses improve operational efficiency, identify opportunities, and make data-driven decisions with confidence.",
+        "capabilities": [
+          "Business Intelligence Strategy",
+          "Interactive Dashboard Development",
+          "Data Visualization",
+          "Real-Time Reporting",
+          "Predictive Analytics",
+          "Data Warehousing Solutions"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Interactive Dashboards",
+            "description": "Monitor business performance through intuitive and customizable dashboards."
+          },
+          {
+            "title": "Real-Time Analytics",
+            "description": "Access up-to-date business insights for faster and more informed decision-making."
+          },
+          {
+            "title": "Data Visualization",
+            "description": "Transform complex datasets into clear and meaningful visual reports."
+          },
+          {
+            "title": "Predictive Analytics",
+            "description": "Leverage historical data to forecast trends and future business outcomes."
+          },
+          {
+            "title": "Data Integration",
+            "description": "Consolidate data from multiple systems into a single source of truth."
+          },
+          {
+            "title": "Custom Reporting",
+            "description": "Generate tailored reports aligned with business goals and KPIs."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "BI Platforms",
+            "items": ["Power BI", "Tableau", "Qlik Sense", "Looker"]
+          },
+          {
+            "name": "Data Processing",
+            "items": ["Apache Spark", "Python", "SQL", "R"]
+          },
+          {
+            "name": "Databases",
+            "items": ["MySQL", "PostgreSQL", "MongoDB", "Microsoft SQL Server"]
+          },
+          {
+            "name": "Cloud Analytics",
+            "items": [
+              "AWS Analytics",
+              "Azure Synapse",
+              "Google BigQuery",
+              "Snowflake"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Data-Driven Decisions",
+            "description": "Make informed decisions backed by accurate and actionable insights."
+          },
+          {
+            "title": "Improved Operational Efficiency",
+            "description": "Identify bottlenecks and optimize business processes using analytics."
+          },
+          {
+            "title": "Better Forecasting",
+            "description": "Predict future trends and business outcomes with confidence."
+          },
+          {
+            "title": "Enhanced Visibility",
+            "description": "Gain a comprehensive view of business performance across departments."
+          },
+          {
+            "title": "Increased Profitability",
+            "description": "Discover opportunities to reduce costs and maximize revenue."
+          },
+          {
+            "title": "Competitive Advantage",
+            "description": "Stay ahead of competitors through data-backed strategic planning."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Finance",
+            "description": "Financial reporting, risk analysis, and performance monitoring solutions."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Patient analytics, operational insights, and healthcare performance tracking."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Customer behavior analysis, sales forecasting, and inventory optimization."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Production monitoring, quality control, and operational analytics."
+          },
+          {
+            "name": "Logistics",
+            "description": "Supply chain visibility, route optimization, and delivery performance tracking."
+          },
+          {
+            "name": "Telecommunications",
+            "description": "Customer analytics, network performance monitoring, and service optimization."
+          }
+        ]
+      }
+    },
+    { 
+      "id": 5,
+      "slug": "software-testing-quality-assurance",
+      "serviceName": "Software Testing & Quality Assurance Services",
+      "tagline": "Delivering Reliable, Secure & High-Performance Software",
+      "image": "/Services/Services-Software Testing and QA.webp",
+
+
+      "hero": {
+        "title": "Software Testing & Quality Assurance Services",
+        "description": "Ensure flawless software performance with comprehensive testing and quality assurance solutions. Our QA experts help businesses deliver secure, reliable, and high-performing applications that provide exceptional user experiences while minimizing risks and defects.",
+        "primaryCTA": "Request QA Consultation",
+        "secondaryCTA": "Explore Testing Services"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our Software Testing and Quality Assurance services ensure that your applications meet the highest standards of functionality, performance, security, and usability. We employ a combination of manual and automated testing methodologies to identify defects early, reduce development costs, and accelerate product releases.",
+        "capabilities": [
+          "Manual Testing",
+          "Automated Testing",
+          "Performance Testing",
+          "Security Testing",
+          "Regression Testing",
+          "Mobile & Web Application Testing"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Functional Testing",
+            "description": "Validate application features and functionality against business requirements."
+          },
+          {
+            "title": "Automation Testing",
+            "description": "Accelerate testing cycles through robust automated testing frameworks."
+          },
+          {
+            "title": "Performance Testing",
+            "description": "Ensure applications remain responsive and stable under varying workloads."
+          },
+          {
+            "title": "Security Testing",
+            "description": "Identify vulnerabilities and strengthen application security before deployment."
+          },
+          {
+            "title": "Cross-Platform Testing",
+            "description": "Verify seamless application performance across devices, browsers, and operating systems."
+          },
+          {
+            "title": "Continuous Quality Monitoring",
+            "description": "Integrate quality assurance into the development lifecycle for consistent product excellence."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Automation Tools",
+            "items": ["Selenium", "Cypress", "Playwright", "Appium", "TestNG"]
+          },
+          {
+            "name": "Performance Testing",
+            "items": ["JMeter", "LoadRunner", "K6", "Gatling"]
+          },
+          {
+            "name": "API Testing",
+            "items": ["Postman", "SoapUI", "Rest Assured"]
+          },
+          {
+            "name": "CI/CD Integration",
+            "items": [
+              "Jenkins",
+              "GitHub Actions",
+              "Azure DevOps",
+              "GitLab CI/CD"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Improved Software Quality",
+            "description": "Deliver stable, reliable applications with fewer defects and better performance."
+          },
+          {
+            "title": "Reduced Business Risks",
+            "description": "Identify and resolve critical issues before they impact users and operations."
+          },
+          {
+            "title": "Faster Time-to-Market",
+            "description": "Accelerate releases through efficient testing and automation strategies."
+          },
+          {
+            "title": "Enhanced User Experience",
+            "description": "Ensure applications perform consistently across all devices and platforms."
+          },
+          {
+            "title": "Cost Savings",
+            "description": "Reduce maintenance and post-release bug-fixing costs through early defect detection."
+          },
+          {
+            "title": "Regulatory Compliance",
+            "description": "Meet industry standards and compliance requirements with thorough quality validation."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Finance",
+            "description": "Testing secure financial applications, banking platforms, and payment systems."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Ensuring compliance, security, and reliability in healthcare applications."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Validating online shopping experiences, transactions, and performance."
+          },
+          {
+            "name": "Technology",
+            "description": "Supporting software companies with end-to-end testing and quality assurance."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Testing enterprise applications that optimize production and operations."
+          },
+          {
+            "name": "Telecommunications",
+            "description": "Ensuring network applications and customer platforms perform reliably at scale."
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "slug": "devops-consulting-automation",
+      "serviceName": "DevOps Consulting & Automation Services",
+      "tagline": "Accelerate Innovation Through Automation",
+      "image": "/Services/Services-Deveops.webp",
+
+      "hero": {
+        "title": "DevOps Consulting & Automation Services",
+        "description": "Streamline software development and IT operations with modern DevOps practices. We help organizations automate workflows, improve collaboration, accelerate deployments, and build scalable infrastructure for faster and more reliable software delivery.",
+        "primaryCTA": "Start Your DevOps Journey",
+        "secondaryCTA": "Consult Our Experts"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our DevOps consulting services bridge the gap between development and operations teams, enabling continuous integration, continuous delivery, and infrastructure automation. We help businesses improve deployment speed, system reliability, and operational efficiency through proven DevOps methodologies and tools.",
+        "capabilities": [
+          "CI/CD Pipeline Implementation",
+          "Infrastructure as Code (IaC)",
+          "Cloud Infrastructure Automation",
+          "Containerization & Orchestration",
+          "Monitoring & Logging Solutions",
+          "DevOps Strategy & Consulting"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "CI/CD Automation",
+            "description": "Automate software build, testing, and deployment processes for faster releases."
+          },
+          {
+            "title": "Infrastructure as Code",
+            "description": "Manage and provision infrastructure efficiently using code-driven automation."
+          },
+          {
+            "title": "Containerization",
+            "description": "Package applications into containers for consistency across development and production environments."
+          },
+          {
+            "title": "Kubernetes Orchestration",
+            "description": "Deploy, manage, and scale containerized applications with Kubernetes."
+          },
+          {
+            "title": "Continuous Monitoring",
+            "description": "Gain real-time visibility into application performance and infrastructure health."
+          },
+          {
+            "title": "Automated Security",
+            "description": "Integrate security checks and compliance validation directly into CI/CD pipelines."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "CI/CD Tools",
+            "items": [
+              "Jenkins",
+              "GitHub Actions",
+              "GitLab CI/CD",
+              "Azure DevOps",
+              "CircleCI"
+            ]
+          },
+          {
+            "name": "Containerization",
+            "items": ["Docker", "Podman", "Kubernetes", "OpenShift"]
+          },
+          {
+            "name": "Infrastructure as Code",
+            "items": ["Terraform", "Ansible", "CloudFormation", "Pulumi"]
+          },
+          {
+            "name": "Monitoring & Logging",
+            "items": [
+              "Prometheus",
+              "Grafana",
+              "ELK Stack",
+              "Datadog",
+              "New Relic"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Faster Software Delivery",
+            "description": "Reduce deployment times and release new features more frequently."
+          },
+          {
+            "title": "Improved Collaboration",
+            "description": "Enhance communication and alignment between development and operations teams."
+          },
+          {
+            "title": "Increased Reliability",
+            "description": "Minimize downtime and improve application stability through automation."
+          },
+          {
+            "title": "Scalable Infrastructure",
+            "description": "Build infrastructure that grows seamlessly with business demands."
+          },
+          {
+            "title": "Enhanced Security",
+            "description": "Integrate security best practices throughout the software delivery lifecycle."
+          },
+          {
+            "title": "Reduced Operational Costs",
+            "description": "Optimize resource utilization and minimize manual operational tasks."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Technology",
+            "description": "Accelerate software delivery and improve platform reliability."
+          },
+          {
+            "name": "Finance",
+            "description": "Enable secure and compliant deployment pipelines for financial applications."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Support scalable healthcare systems with automated infrastructure management."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Ensure high availability and rapid deployment of customer-facing platforms."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Modernize operations through automated infrastructure and system integration."
+          },
+          {
+            "name": "Telecommunications",
+            "description": "Optimize network applications and infrastructure through DevOps automation."
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "slug": "cloud-computing-migration",
+      "serviceName": "Cloud Computing & Migration Solutions",
+      "tagline": "Scale Faster with Secure Cloud Infrastructure",
+      "image": "/Services/Services-Cloud Computing.webp",
+
+
+      "hero": {
+        "title": "Cloud Computing & Migration Solutions",
+        "description": "Unlock the full potential of cloud technology with secure, scalable, and cost-effective cloud solutions. We help businesses modernize infrastructure, migrate applications, optimize workloads, and accelerate innovation through cloud transformation strategies.",
+        "primaryCTA": "Move to the Cloud",
+        "secondaryCTA": "Talk to a Cloud Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our cloud computing services help organizations leverage modern cloud platforms to improve agility, scalability, security, and operational efficiency. From cloud migration and infrastructure modernization to cloud-native application development and managed services, we provide end-to-end cloud solutions tailored to your business objectives.",
+        "capabilities": [
+          "Cloud Migration Services",
+          "Cloud Infrastructure Management",
+          "Cloud-Native Application Development",
+          "Multi-Cloud & Hybrid Cloud Solutions",
+          "Cloud Security & Compliance",
+          "Cloud Cost Optimization"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Cloud Migration",
+            "description": "Seamlessly migrate applications, databases, and workloads to modern cloud platforms."
+          },
+          {
+            "title": "Scalable Infrastructure",
+            "description": "Build flexible cloud environments that adapt to changing business requirements."
+          },
+          {
+            "title": "Cloud Security",
+            "description": "Protect critical data and applications with advanced cloud security practices."
+          },
+          {
+            "title": "Multi-Cloud Strategy",
+            "description": "Leverage multiple cloud providers for enhanced reliability and flexibility."
+          },
+          {
+            "title": "Disaster Recovery",
+            "description": "Ensure business continuity with robust backup and recovery solutions."
+          },
+          {
+            "title": "Cost Optimization",
+            "description": "Monitor and optimize cloud spending to maximize return on investment."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Cloud Platforms",
+            "items": [
+              "Amazon Web Services (AWS)",
+              "Microsoft Azure",
+              "Google Cloud Platform",
+              "Oracle Cloud"
+            ]
+          },
+          {
+            "name": "Container Platforms",
+            "items": ["Docker", "Kubernetes", "Amazon EKS", "Azure AKS"]
+          },
+          {
+            "name": "Infrastructure Automation",
+            "items": ["Terraform", "Ansible", "CloudFormation", "Pulumi"]
+          },
+          {
+            "name": "Monitoring & Security",
+            "items": [
+              "CloudWatch",
+              "Datadog",
+              "Azure Monitor",
+              "Prometheus",
+              "Grafana"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Improved Scalability",
+            "description": "Scale resources instantly based on business demands and workload requirements."
+          },
+          {
+            "title": "Reduced Infrastructure Costs",
+            "description": "Eliminate expensive on-premise hardware and optimize operational expenses."
+          },
+          {
+            "title": "Enhanced Security",
+            "description": "Protect data with enterprise-grade cloud security and compliance controls."
+          },
+          {
+            "title": "Greater Business Agility",
+            "description": "Deploy applications faster and respond quickly to market changes."
+          },
+          {
+            "title": "High Availability",
+            "description": "Ensure continuous access to applications and services with resilient cloud infrastructure."
+          },
+          {
+            "title": "Business Continuity",
+            "description": "Minimize downtime through disaster recovery and automated backup solutions."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Finance",
+            "description": "Secure and compliant cloud solutions for banking and financial services."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Scalable cloud infrastructure supporting healthcare applications and patient data."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Cloud-powered digital commerce platforms capable of handling peak demand."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Cloud solutions that streamline production, operations, and supply chain management."
+          },
+          {
+            "name": "Technology",
+            "description": "Modern cloud environments that accelerate software development and innovation."
+          },
+          {
+            "name": "Education",
+            "description": "Reliable cloud platforms for digital learning and educational management systems."
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "slug": "professional-web-development",
+      "serviceName": "Professional Web Development Services",
+      "tagline": "Creating Exceptional Digital Experiences",
+      "image": "/Services/Services-Web Development.jpeg",
+
+      "hero": {
+        "title": "Professional Web Development Services",
+        "description": "Build powerful, scalable, and visually engaging websites that drive business growth. Our web development experts create custom digital experiences that combine innovative design, robust functionality, and seamless performance across all devices.",
+        "primaryCTA": "Start Your Web Project",
+        "secondaryCTA": "View Our Portfolio"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our web development services help businesses establish a strong online presence through custom websites, web applications, and enterprise portals. We focus on delivering responsive, secure, and high-performing digital solutions that enhance user engagement and support your business objectives.",
+        "capabilities": [
+          "Custom Website Development",
+          "Responsive Web Design",
+          "Web Application Development",
+          "E-Commerce Development",
+          "CMS Development",
+          "Website Maintenance & Support"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Responsive Design",
+            "description": "Deliver seamless experiences across desktops, tablets, and mobile devices."
+          },
+          {
+            "title": "Custom Development",
+            "description": "Build tailored web solutions designed specifically for your business needs."
+          },
+          {
+            "title": "E-Commerce Solutions",
+            "description": "Create secure and scalable online stores that drive sales and customer engagement."
+          },
+          {
+            "title": "SEO-Friendly Architecture",
+            "description": "Develop websites optimized for search engines to improve online visibility."
+          },
+          {
+            "title": "High Performance",
+            "description": "Ensure fast loading times and exceptional user experiences."
+          },
+          {
+            "title": "Secure Development",
+            "description": "Implement modern security standards to protect applications and user data."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Frontend",
+            "items": [
+              "React",
+              "Next.js",
+              "Vue.js",
+              "Angular",
+              "TypeScript",
+              "Tailwind CSS"
+            ]
+          },
+          {
+            "name": "Backend",
+            "items": [
+              "Node.js",
+              "Express.js",
+              "PHP",
+              "Laravel",
+              ".NET",
+              "Python"
+            ]
+          },
+          {
+            "name": "Databases",
+            "items": ["MySQL", "PostgreSQL", "MongoDB", "Firebase"]
+          },
+          {
+            "name": "CMS & E-Commerce",
+            "items": ["WordPress", "WooCommerce", "Shopify", "Magento"]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Stronger Online Presence",
+            "description": "Establish a professional digital identity that attracts and engages customers."
+          },
+          {
+            "title": "Enhanced User Experience",
+            "description": "Deliver intuitive and user-friendly interfaces that improve customer satisfaction."
+          },
+          {
+            "title": "Higher Conversion Rates",
+            "description": "Optimize user journeys to generate more leads and sales."
+          },
+          {
+            "title": "Scalable Solutions",
+            "description": "Build websites that grow with your business and evolving requirements."
+          },
+          {
+            "title": "Improved Search Visibility",
+            "description": "Increase organic traffic through SEO-friendly development practices."
+          },
+          {
+            "title": "Long-Term Reliability",
+            "description": "Ensure website stability and performance with ongoing support and maintenance."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "E-Commerce",
+            "description": "Online stores and marketplaces designed to maximize sales and customer engagement."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Patient portals, healthcare websites, and digital health solutions."
+          },
+          {
+            "name": "Finance",
+            "description": "Secure financial platforms and customer-facing banking applications."
+          },
+          {
+            "name": "Education",
+            "description": "Learning management systems and educational web portals."
+          },
+          {
+            "name": "Real Estate",
+            "description": "Property listing platforms and real estate management solutions."
+          },
+          {
+            "name": "Technology",
+            "description": "Corporate websites, SaaS platforms, and custom web applications."
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "slug": "digital-marketing-growth-solutions",
+      "serviceName": "Digital Marketing & Growth Solutions",
+      "tagline": "Accelerate Growth Through Digital Excellence",
+      "image": "/Services/Services-Digital Marketing.jpeg",
+
+      "hero": {
+        "title": "Digital Marketing & Growth Solutions",
+        "description": "Drive brand awareness, generate qualified leads, and maximize ROI with data-driven digital marketing strategies. Our comprehensive digital marketing services help businesses reach the right audience, increase engagement, and achieve sustainable growth in a competitive digital landscape.",
+        "primaryCTA": "Grow Your Business",
+        "secondaryCTA": "Request Marketing Consultation"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our digital marketing services combine strategy, creativity, and analytics to help businesses strengthen their online presence and achieve measurable results. From SEO and paid advertising to content marketing and social media management, we create customized campaigns that align with your business goals and target audience.",
+        "capabilities": [
+          "Search Engine Optimization (SEO)",
+          "Pay-Per-Click Advertising (PPC)",
+          "Social Media Marketing",
+          "Content Marketing",
+          "Email Marketing",
+          "Conversion Rate Optimization"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Search Engine Optimization",
+            "description": "Improve search rankings and drive organic traffic through proven SEO strategies."
+          },
+          {
+            "title": "Paid Advertising Campaigns",
+            "description": "Maximize visibility and conversions with targeted PPC and display advertising."
+          },
+          {
+            "title": "Social Media Management",
+            "description": "Build brand awareness and engage audiences across leading social platforms."
+          },
+          {
+            "title": "Content Strategy",
+            "description": "Create valuable content that attracts, educates, and converts potential customers."
+          },
+          {
+            "title": "Marketing Analytics",
+            "description": "Track campaign performance and optimize strategies using real-time insights."
+          },
+          {
+            "title": "Lead Generation",
+            "description": "Develop campaigns that consistently generate high-quality business leads."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "SEO Tools",
+            "items": [
+              "Google Search Console",
+              "Google Analytics",
+              "SEMrush",
+              "Ahrefs",
+              "Moz"
+            ]
+          },
+          {
+            "name": "Advertising Platforms",
+            "items": [
+              "Google Ads",
+              "Meta Ads",
+              "LinkedIn Ads",
+              "YouTube Ads",
+              "Microsoft Advertising"
+            ]
+          },
+          {
+            "name": "Marketing Automation",
+            "items": ["HubSpot", "Mailchimp", "ActiveCampaign", "Marketo"]
+          },
+          {
+            "name": "Analytics & Reporting",
+            "items": [
+              "Google Analytics 4",
+              "Looker Studio",
+              "Hotjar",
+              "Power BI"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Increased Brand Visibility",
+            "description": "Reach a larger audience and establish a stronger online presence."
+          },
+          {
+            "title": "Higher Lead Generation",
+            "description": "Attract and convert qualified prospects through targeted campaigns."
+          },
+          {
+            "title": "Improved ROI",
+            "description": "Maximize marketing spend through data-driven optimization strategies."
+          },
+          {
+            "title": "Better Customer Engagement",
+            "description": "Build meaningful relationships with audiences across multiple channels."
+          },
+          {
+            "title": "Enhanced Market Insights",
+            "description": "Understand customer behavior and trends through advanced analytics."
+          },
+          {
+            "title": "Sustainable Business Growth",
+            "description": "Create scalable marketing strategies that support long-term success."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "E-Commerce",
+            "description": "Drive online sales and customer acquisition through digital campaigns."
+          },
+          {
+            "name": "Technology",
+            "description": "Generate qualified leads and build brand authority in competitive markets."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Promote healthcare services while maintaining compliance and trust."
+          },
+          {
+            "name": "Education",
+            "description": "Increase student enrollment and engagement through targeted marketing."
+          },
+          {
+            "name": "Real Estate",
+            "description": "Generate property inquiries and strengthen digital presence."
+          },
+          {
+            "name": "Professional Services",
+            "description": "Build credibility and attract clients through strategic online marketing."
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "slug": "cybersecurity-information-security",
+      "serviceName": "Cybersecurity & Information Security Services",
+      "tagline": "Protecting Your Digital Assets with Confidence",
+      "image": "/Services/Services-Cyber Security.webp",
+      "hero": {
+        "title": "Cybersecurity & Information Security Services",
+        "description": "Safeguard your business from evolving cyber threats with comprehensive cybersecurity solutions. Our security experts help organizations protect sensitive data, secure critical infrastructure, ensure regulatory compliance, and build resilient defense strategies against modern cyber risks.",
+        "primaryCTA": "Secure Your Business",
+        "secondaryCTA": "Talk to a Security Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our cybersecurity services are designed to protect organizations from cyber threats while ensuring business continuity and compliance. We provide proactive security assessments, threat monitoring, vulnerability management, incident response, and security consulting to help businesses maintain a strong security posture.",
+        "capabilities": [
+          "Cybersecurity Assessment",
+          "Threat Detection & Monitoring",
+          "Vulnerability Management",
+          "Security Operations Center (SOC)",
+          "Incident Response & Recovery",
+          "Compliance & Risk Management"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Threat Detection & Monitoring",
+            "description": "Continuously monitor systems and networks to identify and respond to potential threats."
+          },
+          {
+            "title": "Vulnerability Assessment",
+            "description": "Discover and remediate security weaknesses before they can be exploited."
+          },
+          {
+            "title": "Security Compliance",
+            "description": "Ensure adherence to industry regulations and security standards."
+          },
+          {
+            "title": "Incident Response",
+            "description": "Rapidly contain, investigate, and recover from cybersecurity incidents."
+          },
+          {
+            "title": "Data Protection",
+            "description": "Secure sensitive business and customer data through advanced protection strategies."
+          },
+          {
+            "title": "Security Awareness Training",
+            "description": "Educate employees on cybersecurity best practices and threat prevention."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Security Platforms",
+            "items": [
+              "Microsoft Defender",
+              "CrowdStrike",
+              "SentinelOne",
+              "Trend Micro",
+              "Sophos"
+            ]
+          },
+          {
+            "name": "SIEM & Monitoring",
+            "items": [
+              "Splunk",
+              "IBM QRadar",
+              "Microsoft Sentinel",
+              "Elastic Security"
+            ]
+          },
+          {
+            "name": "Network Security",
+            "items": [
+              "Fortinet",
+              "Cisco Security",
+              "Palo Alto Networks",
+              "Check Point"
+            ]
+          },
+          {
+            "name": "Cloud Security",
+            "items": [
+              "AWS Security Hub",
+              "Azure Security Center",
+              "Google Security Command Center"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Enhanced Security Posture",
+            "description": "Strengthen your defenses against cyberattacks and emerging threats."
+          },
+          {
+            "title": "Reduced Business Risk",
+            "description": "Minimize the likelihood and impact of security breaches."
+          },
+          {
+            "title": "Regulatory Compliance",
+            "description": "Meet industry and government security requirements with confidence."
+          },
+          {
+            "title": "Business Continuity",
+            "description": "Protect operations and reduce downtime caused by cyber incidents."
+          },
+          {
+            "title": "Customer Trust",
+            "description": "Demonstrate your commitment to protecting customer information."
+          },
+          {
+            "title": "Proactive Threat Management",
+            "description": "Identify and address vulnerabilities before they become critical issues."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Finance",
+            "description": "Protect financial systems, transactions, and sensitive customer information."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Secure patient records and healthcare applications while maintaining compliance."
+          },
+          {
+            "name": "Government",
+            "description": "Strengthen cybersecurity defenses for public sector organizations."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Protect customer data, payment systems, and digital commerce platforms."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Secure operational technology and critical business infrastructure."
+          },
+          {
+            "name": "Technology",
+            "description": "Protect software platforms, cloud environments, and digital assets."
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "slug": "big-data-analytics-data-engineering",
+      "serviceName": "Big Data Analytics & Data Engineering Solutions",
+      "tagline": "Transform Massive Data into Business Intelligence",
+      "image": "/Services/Services-Big data analytics.webp",
+
+      "hero": {
+        "title": "Big Data Analytics & Data Engineering Solutions",
+        "description": "Unlock the true value of your data with advanced Big Data Analytics and Data Engineering services. We help organizations collect, process, manage, and analyze large-scale datasets to uncover actionable insights, improve decision-making, and drive innovation.",
+        "primaryCTA": "Explore Data Solutions",
+        "secondaryCTA": "Speak with a Data Expert"
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our Big Data and Data Engineering services enable businesses to harness structured and unstructured data from multiple sources. We design scalable data architectures, build robust data pipelines, and implement advanced analytics solutions that empower organizations to make data-driven decisions and gain a competitive advantage.",
+        "capabilities": [
+          "Data Engineering & Pipeline Development",
+          "Big Data Processing",
+          "Data Lake & Data Warehouse Solutions",
+          "Advanced Analytics",
+          "Real-Time Data Processing",
+          "Business Intelligence Integration"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Data Pipeline Development",
+            "description": "Build reliable and scalable pipelines for collecting, processing, and transforming data."
+          },
+          {
+            "title": "Real-Time Analytics",
+            "description": "Process streaming data and generate insights instantly for faster decision-making."
+          },
+          {
+            "title": "Data Warehousing",
+            "description": "Centralize business data into secure and optimized warehouses for analytics."
+          },
+          {
+            "title": "Data Lake Architecture",
+            "description": "Store and manage large volumes of structured and unstructured data efficiently."
+          },
+          {
+            "title": "Advanced Reporting",
+            "description": "Generate interactive reports and dashboards that provide actionable business insights."
+          },
+          {
+            "title": "Scalable Data Infrastructure",
+            "description": "Design data platforms that support growing business and analytics requirements."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Big Data Frameworks",
+            "items": [
+              "Apache Hadoop",
+              "Apache Spark",
+              "Apache Kafka",
+              "Apache Flink"
+            ]
+          },
+          {
+            "name": "Data Warehousing",
+            "items": [
+              "Snowflake",
+              "Amazon Redshift",
+              "Google BigQuery",
+              "Azure Synapse Analytics"
+            ]
+          },
+          {
+            "name": "Databases",
+            "items": ["MongoDB", "PostgreSQL", "MySQL", "Cassandra"]
+          },
+          {
+            "name": "Analytics & Visualization",
+            "items": ["Power BI", "Tableau", "Looker", "Qlik Sense"]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Better Decision-Making",
+            "description": "Leverage accurate data insights to make strategic business decisions."
+          },
+          {
+            "title": "Improved Operational Efficiency",
+            "description": "Identify inefficiencies and optimize business processes using analytics."
+          },
+          {
+            "title": "Real-Time Visibility",
+            "description": "Monitor key business metrics and performance indicators instantly."
+          },
+          {
+            "title": "Scalable Data Management",
+            "description": "Handle increasing volumes of data without compromising performance."
+          },
+          {
+            "title": "Competitive Advantage",
+            "description": "Discover trends, opportunities, and market insights before competitors."
+          },
+          {
+            "title": "Data-Driven Innovation",
+            "description": "Use analytics to develop innovative products, services, and business models."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Finance",
+            "description": "Fraud detection, risk analysis, and financial forecasting using large-scale data."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Patient analytics, predictive healthcare insights, and operational optimization."
+          },
+          {
+            "name": "Retail & E-Commerce",
+            "description": "Customer behavior analysis, demand forecasting, and inventory optimization."
+          },
+          {
+            "name": "Telecommunications",
+            "description": "Network monitoring, customer analytics, and service optimization."
+          },
+          {
+            "name": "Manufacturing",
+            "description": "Predictive maintenance, production analytics, and supply chain intelligence."
+          },
+          {
+            "name": "Logistics",
+            "description": "Route optimization, fleet management, and real-time supply chain analytics."
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "slug": "product-development-innovation",
+      "serviceName": "Product Development & Innovation Services",
+      "tagline": "Transforming Ideas into Market-Ready Products",
+      "image": "/Services/Service-Product Development.webp",
+
+      "hero": {
+        "title": "Product Development & Innovation Services",
+        "description": "From concept validation to product launch, we help businesses build innovative digital products that solve real-world challenges and create lasting value."
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our product development team combines strategy, design, engineering, and market insights to create scalable digital products that drive business growth.",
+        "capabilities": [
+          "Product Strategy",
+          "MVP Development",
+          "Product Design",
+          "Rapid Prototyping",
+          "Product Modernization",
+          "Product Lifecycle Management"
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Product Discovery",
+            "description": "Validate ideas and identify market opportunities."
+          },
+          {
+            "title": "MVP Development",
+            "description": "Launch products quickly with minimum viable products."
+          },
+          {
+            "title": "User-Centric Design",
+            "description": "Create intuitive and engaging experiences."
+          },
+          {
+            "title": "Agile Development",
+            "description": "Iterative development with faster delivery cycles."
+          },
+          {
+            "title": "Scalable Architecture",
+            "description": "Build products ready for future growth."
+          },
+          {
+            "title": "Continuous Innovation",
+            "description": "Improve products through ongoing enhancements."
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "categories": [
+          {
+            "name": "Development",
+            "items": ["React", "Next.js", "Node.js", "Python"]
+          },
+          {
+            "name": "Cloud",
+            "items": ["AWS", "Azure", "Google Cloud"]
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          {
+            "title": "Faster Time-to-Market",
+            "description": "Launch products quickly and efficiently."
+          },
+          {
+            "title": "Reduced Development Risk",
+            "description": "Validate concepts before major investment."
+          },
+          {
+            "title": "Scalable Growth",
+            "description": "Build products that evolve with demand."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industries We Serve",
+        "items": [
+          {
+            "name": "Technology",
+            "description": "SaaS and software products."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Digital health and patient solutions."
+          },
+          {
+            "name": "Finance",
+            "description": "FinTech products and platforms."
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "slug": "crm-services",
+      "serviceName": "Customer Relationship Management (CRM) Services",
+      "tagline": "Building Stronger Customer Relationships",
+      "image":"/Services/CRM Services.webp",
+      "hero": {
+        "title": "Customer Relationship Management (CRM) Services",
+        "description": "Streamline customer interactions, improve engagement, and drive business growth with tailored CRM solutions."
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "We help organizations implement and optimize CRM systems that centralize customer data, automate workflows, and improve customer experiences.",
+        "capabilities": [
+          "CRM Implementation",
+          "CRM Customization",
+          "Customer Journey Mapping",
+          "Workflow Automation",
+          "Data Migration",
+          "CRM Support"
+        ]
+      },
+      "keyFeatures": {
+        "items": [
+          {
+            "title": "Customer Data Management",
+            "description": "Maintain a unified customer database."
+          },
+          {
+            "title": "Sales Automation",
+            "description": "Automate sales and lead management processes."
+          },
+          {
+            "title": "Workflow Optimization",
+            "description": "Improve operational efficiency."
+          },
+          {
+            "title": "Customer Analytics",
+            "description": "Gain valuable customer insights."
+          },
+          {
+            "title": "Marketing Integration",
+            "description": "Connect CRM with marketing channels."
+          },
+          {
+            "title": "Custom Dashboards",
+            "description": "Monitor performance with real-time reporting."
+          }
+        ]
+      },
+      "technologies": {
+        "categories": [
+          {
+            "name": "CRM Platforms",
+            "items": [
+              "Salesforce",
+              "HubSpot",
+              "Zoho CRM",
+              "Microsoft Dynamics 365"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          {
+            "title": "Improved Customer Satisfaction",
+            "description": "Deliver personalized experiences."
+          },
+          {
+            "title": "Increased Sales Efficiency",
+            "description": "Manage leads and opportunities effectively."
+          },
+          {
+            "title": "Better Visibility",
+            "description": "Gain insights into customer interactions."
+          }
+        ]
+      },
+      "industries": {
+        "items": [
+          { "name": "Retail", "description": "Customer engagement solutions." },
+          {
+            "name": "Healthcare",
+            "description": "Patient relationship management."
+          },
+          {
+            "name": "Finance",
+            "description": "Client management and retention."
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "slug": "it-staffing-talent-acquisition",
+      "serviceName": "IT Staffing & Talent Acquisition Solutions",
+      "tagline": "Connecting Businesses with Top IT Talent",
+      "image":"/Services/Services-IT service support.webp",
+      "hero": {
+        "title": "IT Staffing & Talent Acquisition Solutions",
+        "description": "Access skilled IT professionals and build high-performing teams with flexible staffing and recruitment solutions."
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "We provide specialized IT staffing services to help organizations find, recruit, and retain top technology talent.",
+        "capabilities": [
+          "Contract Staffing",
+          "Permanent Hiring",
+          "Dedicated Teams",
+          "Executive Search",
+          "Remote Talent Solutions",
+          "Talent Consulting"
+        ]
+      },
+      "keyFeatures": {
+        "items": [
+          {
+            "title": "Technical Recruitment",
+            "description": "Source highly qualified IT professionals."
+          },
+          {
+            "title": "Flexible Staffing",
+            "description": "Scale teams based on project needs."
+          },
+          {
+            "title": "Dedicated Resources",
+            "description": "Access specialized talent quickly."
+          },
+          {
+            "title": "Talent Screening",
+            "description": "Comprehensive candidate evaluation."
+          },
+          {
+            "title": "Rapid Hiring",
+            "description": "Reduce recruitment timelines."
+          },
+          {
+            "title": "Workforce Planning",
+            "description": "Align talent strategy with business goals."
+          }
+        ]
+      },
+      "technologies": {
+        "categories": [
+          {
+            "name": "Talent Areas",
+            "items": [
+              "Software Development",
+              "Cloud Computing",
+              "Cybersecurity",
+              "Data Engineering",
+              "DevOps",
+              "AI & ML"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          {
+            "title": "Faster Hiring",
+            "description": "Reduce recruitment cycles."
+          },
+          {
+            "title": "Access to Top Talent",
+            "description": "Hire experienced professionals."
+          },
+          {
+            "title": "Cost Efficiency",
+            "description": "Optimize recruitment costs."
+          }
+        ]
+      },
+      "industries": {
+        "items": [
+          { "name": "Technology", "description": "Software and IT staffing." },
+          {
+            "name": "Finance",
+            "description": "Technology talent for financial services."
+          },
+          {
+            "name": "Healthcare",
+            "description": "Healthcare IT professionals."
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "slug": "it-service-support-managed-it-services",
+      "serviceName": "IT Service Support & Managed IT Services",
+      "tagline": "Reliable IT Support for Continuous Business Operations",
+      "image":"/Services/Services-IT Staff.webp",
+      "hero": {
+        "title": "IT Service Support & Managed IT Services",
+        "description": "Ensure seamless business operations with proactive IT support, infrastructure management, and managed services tailored to your organization."
+      },
+      "overview": {
+        "title": "Service Overview",
+        "description": "Our managed IT services provide ongoing monitoring, maintenance, troubleshooting, and support to keep your technology environment secure, efficient, and available.",
+        "capabilities": [
+          "24/7 IT Support",
+          "Infrastructure Management",
+          "Network Monitoring",
+          "Help Desk Services",
+          "System Maintenance",
+          "Managed Security Services"
+        ]
+      },
+      "keyFeatures": {
+        "items": [
+          {
+            "title": "24/7 Monitoring",
+            "description": "Continuous monitoring of systems and networks."
+          },
+          {
+            "title": "Help Desk Support",
+            "description": "Fast issue resolution and technical assistance."
+          },
+          {
+            "title": "Infrastructure Management",
+            "description": "Maintain servers, networks, and devices."
+          },
+          {
+            "title": "Backup & Recovery",
+            "description": "Protect business-critical data."
+          },
+          {
+            "title": "Security Management",
+            "description": "Proactive protection against threats."
+          },
+          {
+            "title": "Performance Optimization",
+            "description": "Improve system efficiency and reliability."
+          }
+        ]
+      },
+      "technologies": {
+        "categories": [
+          {
+            "name": "Infrastructure",
+            "items": [
+              "Windows Server",
+              "Linux",
+              "VMware",
+              "Microsoft 365",
+              "Azure",
+              "AWS"
+            ]
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          {
+            "title": "Reduced Downtime",
+            "description": "Keep systems available and operational."
+          },
+          {
+            "title": "Lower IT Costs",
+            "description": "Predictable and optimized IT spending."
+          },
+          {
+            "title": "Improved Security",
+            "description": "Protect business systems and data."
+          },
+          {
+            "title": "Business Continuity",
+            "description": "Maintain operations during disruptions."
+          }
+        ]
+      },
+      "industries": {
+        "items": [
+          {
+            "name": "Healthcare",
+            "description": "Reliable IT support for healthcare organizations."
+          },
+          { "name": "Finance", "description": "Secure managed IT services." },
+          {
+            "name": "Manufacturing",
+            "description": "Infrastructure support for production environments."
+          },
+          {
+            "name": "Retail",
+            "description": "Support for customer-facing systems."
+          }
+        ]
+      }
+    }
+  ]
+}
