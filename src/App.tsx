@@ -7,9 +7,10 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
-import IndustriesDetails from "./components/Industries/IndustriesDetails";
+// import IndustriesDetails from "./components/Industries/IndustriesDetails";
 // import ServiceDetailPage from "./components/ServicesDetails/ServiceDetailsPage";
 import ServiceDetails from "./pages/ServiceDetails/[slug]";
+import IndustryDetails from "./pages/IndustryDetails/[slug]";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/industries" element={<Industries />}></Route>
-        <Route  path="/industries/:industryId" element={<IndustriesDetails />}
+        <Route  path="/industries/:id" element={<IndustryDetails />}
   />
         <Route path="/careers" element={<Careers />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
