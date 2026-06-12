@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   ArrowUpRight,
   Cpu,
@@ -14,83 +15,81 @@ import {
   Smartphone
 } from "lucide-react";
 
-interface ServiceData {
+interface Service {
   id: number;
   slug: string;
   serviceName: string;
   tagline: string;
-  hero: { title: string; description: string; primaryCTA: string; secondaryCTA: string; };
-  overview: { title: string; description: string; capabilities: string[]; };
-  keyFeatures: { title: string; items: { title: string; description: string }[]; };
-  technologies: { title: string; categories: { name: string; items: string[] }[]; };
-  benefits: { title: string; items: { title: string; description: string }[]; };
-  industries: { title: string; items: { name: string; description: string }[]; };
+  hero: {
+    title: string;
+    description: string;
+    primaryCTA: string;
+    secondaryCTA: string;
+  };
+  overview: {
+    title: string;
+    description: string;
+    capabilities: string[];
+  };
+  keyFeatures: {
+    title: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  technologies: {
+    title: string;
+    categories: {
+      name: string;
+      items: string[];
+    }[];
+  };
+  benefits: {
+    title: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  industries: {
+    title: string;
+    items: {
+      name: string;
+      description: string;
+    }[];
+  };
 }
 
-export default function PremiumServicePage() {
-  const data: ServiceData = {
-    id: 8,
-    slug: "professional-web-development",
-    serviceName: "Professional Web Development Services",
-    tagline: "Service We Offer",
-    hero: {
-      title: "Providing Reliable Enterprise IT Solutions for Businesses.",
-      description: "Our elite agile squads deliver tailored digital products and robust cloud architectures designed to optimize operations, scale infrastructure, and enhance workflows seamlessly.",
-      primaryCTA: "Start Your Web Project",
-      secondaryCTA: "View Our Portfolio",
-    },
-    overview: {
-      title: "Explore Our Comprehensive Range Of Digital Services Designed To Elevate Your Online Presence.",
-      description: "With deep technical knowledge and a track record of production-grade architecture loops, we design interfaces that convert, backend layers that scale reliably, and automated system delivery pipelines.",
-      capabilities: [
-        "Search Engine Optimization",
-        "Social Media Marketing Services",
-        "Digital Content Marketing Creation",
-        "Pay-Per-Click (PPC) Advertising",
-        "Conversion-Driven Web Design",
-        "Marketing Analytics And Insights",
-      ],
-    },
-    keyFeatures: {
-      title: "Discover The Reasons Why Brands Choose Us As Their Digital Marketing Partner.",
-      items: [
-        { title: "Strategic Expertise", description: "Deliver flawless cross-platform performance patterns across modern desktop and mobile view layouts seamlessly." },
-        { title: "Creative Innovation", description: "Build cleanly structured codebase architecture tailored strictly around unique enterprise infrastructure." },
-        { title: "Data-Driven Results", description: "Create lightning-fast and secure transactional storefront hubs that dramatically scale continuous conversions." },
-        { title: "Collaborative Partnership", description: "Develop performance-first standard compilation layers for optimal structural site rendering index scores." },
-      ],
-    },
-    technologies: {
-      title: "Technologies We Use",
-      categories: [
-        { name: "Frontend", items: ["React", "Next.js", "Vue.js", "Angular", "TypeScript", "Tailwind CSS"] },
-        { name: "Backend", items: ["Node.js", "Express.js", "PHP", "Laravel", ".NET", "Python"] },
-        { name: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"] },
-        { name: "CMS & E-Commerce", items: ["WordPress", "WooCommerce", "Shopify", "Magento"] },
-      ],
-    },
-    benefits: {
-      title: "Why choose our web ecosystem",
-      items: [
-        { title: "Guaranteed Financial Security", description: "Our production plans provide a reliable financial safety net for your enterprise roadmaps under structured SLA agreements." },
-        { title: "Affordable premium options with easy payment plans.", description: "Choose from completely flexible agile development scopes built for variable enterprise roadmap tracks." },
-        { title: "Dedicated advisor support purchase to claim settlement.", description: "Our expert engineering team is available round-the-clock to counter application bottlenecks flawlessly." },
-      ],
-    },
-    industries: {
-      title: "Unleash Your Potential",
-      items: [
-        { name: "E-Commerce Systems", description: "Communicating what sets the company apart from competitors and visionary engineering compass tracks." },
-        { name: "Healthcare Platforms", description: "Communicating what sets the company apart from competitors and visionary engineering compass tracks." },
-        { name: "Financial Architecture", description: "Communicating what sets the company apart from competitors and visionary engineering compass tracks." },
-        { name: "Educational Portals", description: "Communicating what sets the company apart from competitors and visionary engineering compass tracks." },
-      ],
-    },
-  };
-
+const ServiceDetails = () => {
+  const { slug } = useParams();
+  const [service, setService] = useState<Service | null>(null);
   const [currentTab, setCurrentTab] = useState(0);
 
-  // Mapping out dynamic custom icons for Image 1 Grid Section
+  useEffect(() => {
+    fetch("/Data/servicesdetails.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const foundService = data.services.find(
+          (item: Service) => item.slug === slug,
+        );
+        setService(foundService || null);
+        // Reset dynamic tab index on data route update
+        setCurrentTab(0);
+      });
+  }, [slug]);
+
+  if (!service) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#FAF9F5] text-stone-500 font-sans antialiased">
+        <div className="animate-pulse tracking-wider font-semibold text-xs uppercase">
+          Loading Service Modules...
+        </div>
+      </div>
+    );
+  }
+
+  // Dynamic mapping array for Overview grid custom icons
   const serviceIcons = [Search, Users, Workflow, TrendingUp, Code, Cpu];
 
   return (
@@ -105,20 +104,26 @@ export default function PremiumServicePage() {
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-0">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF9F5] border border-stone-200/80 rounded-full text-xs font-semibold text-stone-600">
-              <span className="text-[#E28743] text-sm">✦</span> {data.serviceName}
+              <span className="text-[#E28743] text-sm">✦</span> {service.serviceName}
             </div>
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-[#0C111D] tracking-tight leading-[1.1]">
-              Providing <span className="text-[#E28743] font-serif font-normal italic">Reliable</span> Enterprise Solutions.
+              {service.hero.title.includes("Reliable") ? (
+                <>
+                  Providing <span className="text-[#E28743] font-serif font-normal italic">Reliable</span> Enterprise Solutions.
+                </>
+              ) : (
+                service.hero.title
+              )}
             </h1>
             <p className="text-stone-500 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-              {data.hero.description}
+              {service.hero.description}
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <button className="px-6 py-3.5 bg-[#0C111D] hover:bg-stone-800 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center gap-2">
-                {data.hero.primaryCTA} <ArrowUpRight className="w-4 h-4" />
+                {service.hero.primaryCTA} <ArrowUpRight className="w-4 h-4" />
               </button>
               <button className="px-6 py-3.5 bg-white hover:bg-stone-50 text-stone-800 border border-stone-200 rounded-xl text-xs font-bold uppercase tracking-wider transition-all">
-                {data.hero.secondaryCTA}
+                {service.hero.secondaryCTA}
               </button>
             </div>
           </div>
@@ -126,7 +131,7 @@ export default function PremiumServicePage() {
           <div className="lg:col-span-5 relative w-full h-[400px] bg-stone-100 rounded-[2rem] overflow-hidden shadow-sm border border-stone-200/60">
             <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
-              alt="Team Meeting" 
+              alt="Team Architecture Framework" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -137,15 +142,15 @@ export default function PremiumServicePage() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="text-center max-w-4xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E28743] border-b-2 border-[#E28743]/30 pb-1">
-            {data.tagline}
+            {service.tagline}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0C111D] tracking-tight leading-snug">
-            {data.overview.title}
+            {service.overview.title}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.overview.capabilities.map((capability, idx) => {
+          {service.overview.capabilities.map((capability, idx) => {
             const Icon = serviceIcons[idx] || Code;
             const isFirst = idx === 0;
 
@@ -166,7 +171,10 @@ export default function PremiumServicePage() {
                     {capability}
                   </h3>
                   <p className={`text-xs leading-relaxed font-light ${isFirst ? "text-white/90" : "text-stone-400"}`}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Core integrity layer loops tracking frameworks.
+                    {service.overview.description.length > 120 
+                      ? `${service.overview.description.substring(0, 110)}...` 
+                      : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Core integrity layer loops tracking frameworks."
+                    }
                   </p>
                 </div>
                 
@@ -188,12 +196,12 @@ export default function PremiumServicePage() {
             <div className="space-y-3">
               <span className="text-xs font-bold uppercase tracking-widest text-[#E28743]">WHY CHOOSE US</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0C111D] max-w-xl">
-                {data.keyFeatures.title}
+                {service.keyFeatures.title}
               </h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {data.keyFeatures.items.map((item, idx) => {
+              {service.keyFeatures.items.map((item, idx) => {
                 const isHighlight = idx === 0;
                 return (
                   <div 
@@ -219,7 +227,7 @@ export default function PremiumServicePage() {
           <div className="lg:col-span-5 h-[480px] rounded-2xl overflow-hidden shadow-sm border border-stone-200/60">
             <img 
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
-              alt="Digital Marketing Specialist" 
+              alt="Digital Solution Specialist" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -232,14 +240,14 @@ export default function PremiumServicePage() {
           <div className="lg:col-span-4 h-[420px] rounded-2xl overflow-hidden shadow-xs">
             <img 
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" 
-              alt="Team Collaboration" 
+              alt="Team Technical Alignment" 
               className="w-full h-full object-cover"
             />
           </div>
 
           <div className="lg:col-span-8 space-y-8">
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E28743]">HOW ITS WORK</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#E28743]">HOW IT WORKS</span>
               <h2 className="text-3xl font-extrabold text-[#0C111D] tracking-tight">
                 Excellent Work From Increased Website Traffic To Higher Conversion Rates.
               </h2>
@@ -270,13 +278,13 @@ export default function PremiumServicePage() {
           <div className="lg:col-span-4 space-y-6">
             <div className="space-y-2">
               <h2 className="text-3xl font-black text-[#0C111D] tracking-tight leading-tight">
-                {data.technologies.title}
+                {service.technologies.title}
               </h2>
               <p className="text-stone-500 text-sm font-light">Select a quadrant to view targeted stack integrations.</p>
             </div>
             
             <div className="flex flex-col gap-2">
-              {data.technologies.categories.map((cat, index) => (
+              {service.technologies.categories.map((cat, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTab(index)}
@@ -295,7 +303,7 @@ export default function PremiumServicePage() {
 
           <div className="lg:col-span-8 bg-[#FAF9F5] border border-stone-200 rounded-2xl p-6 sm:p-8 min-h-[320px] flex flex-col justify-between shadow-xs">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
-              {data.technologies.categories[currentTab].items.map((tech, idx) => (
+              {service.technologies.categories[currentTab]?.items.map((tech, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-stone-200/60 flex items-center justify-between group hover:border-[#E28743] transition-all">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-stone-50 border border-stone-200 flex items-center justify-center text-stone-400 group-hover:text-[#0C111D] transition-colors">
@@ -317,21 +325,21 @@ export default function PremiumServicePage() {
           <div className="lg:col-span-5 relative h-[460px] rounded-2xl overflow-hidden shadow-sm">
             <img 
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
-              alt="Strategic Team Meeting" 
+              alt="Strategic Infrastructure Overview" 
               className="w-full h-full object-cover"
             />
           </div>
 
           <div className="lg:col-span-7 space-y-6">
             <h2 className="text-4xl font-extrabold text-[#0C111D] tracking-tight">
-              {data.benefits.title}
+              {service.benefits.title}
             </h2>
             <p className="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
               Our web infrastructure plans are built on transparency, flexibility, and long-term reliability. We optimize custom environments tailored to system requirements.
             </p>
 
             <div className="space-y-6 pt-4">
-              {data.benefits.items.map((benefit, idx) => {
+              {service.benefits.items.map((benefit, idx) => {
                 const isFirst = idx === 0;
                 return (
                   <div key={idx} className={isFirst ? "space-y-2 border-b border-stone-200 pb-4" : "p-5 bg-stone-100/50 border border-stone-200/40 rounded-xl flex items-start gap-4"}>
@@ -364,18 +372,18 @@ export default function PremiumServicePage() {
         <div className="max-w-6xl mx-auto p-10 sm:p-14 bg-[#FAF9F5] border border-stone-200 rounded-[2.5rem] space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-[#E28743] bg-orange-50 px-3 py-1 rounded-full">
-              SERVICES
+              INDUSTRIES
             </span>
             <h2 className="text-3xl font-black text-[#0C111D] tracking-tight">
-              {data.industries.title}
+              {service.industries.title}
             </h2>
             <p className="text-stone-400 max-w-xl mx-auto text-xs font-light leading-relaxed">
-              About Us section typically appears on a company or organization's website and provides visitors with key structural roadmap specifications.
+              Tailored ecosystem frameworks configured precisely around unique digital market operations and structural compliance parameters.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {data.industries.items.map((ind, idx) => (
+            {service.industries.items.map((ind, idx) => (
               <div key={idx} className="bg-white border border-stone-200/60 rounded-2xl p-6 space-y-4 shadow-xs hover:border-stone-300 transition-colors flex flex-col justify-between">
                 <div className="space-y-3">
                   <div className="w-9 h-9 rounded-xl bg-stone-50 flex items-center justify-center border border-stone-200 text-[#0C111D]">
@@ -401,4 +409,6 @@ export default function PremiumServicePage() {
 
     </div>
   );
-}
+};
+
+export default ServiceDetails;
