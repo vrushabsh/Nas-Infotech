@@ -3,7 +3,7 @@ const AboutHeroSection = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <img
-        src="/About/aboutHerosection.jpg"
+        src="/About/About-header.jpg"
         alt="about"
         className="w-full h-full object-cover"
       />
