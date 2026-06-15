@@ -8,7 +8,7 @@ interface DynamicBadgeProps {
 
 const DynamicBadge: React.FC<DynamicBadgeProps> = ({
   title,
-  icon = <span className="text-[#113217] text-sm">✲</span>,
+  icon = <span className="text-[#113217] text-sm text-[#e09c4d]">✲</span>,
   className = "",
 }) => {
   return (
