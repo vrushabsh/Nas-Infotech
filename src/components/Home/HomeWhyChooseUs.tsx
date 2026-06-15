@@ -291,59 +291,6 @@ const HomeWhyChooseUs: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-
-            {/* Floating Card */}
-            <motion.div
-              className="absolute bottom-6 left-6 right-6 sm:right-auto sm:left-6 sm:max-w-[340px] md:max-w-[380px] bg-white rounded-[24px] p-6 shadow-2xl border border-gray-100/50 z-10"
-              initial={{
-                opacity: 0,
-                y: 80,
-                scale: 0.9,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: 0.4,
-              }}
-              whileHover={{
-                y: -6,
-              }}
-              viewport={{ once: true }}
-            >
-
-              {/* Quote */}
-              <p className="text-[#0a1118] font-bold text-sm sm:text-base leading-relaxed mb-6">
-                &ldquo; I was looking for reliable business insurance and
-                wasn&apos;t sure where to start. &rdquo;
-              </p>
-
-              <div className="w-full h-[1px] bg-gray-100 mb-4"></div>
-
-              {/* User */}
-              <div className="flex items-center gap-3">
-
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150"
-                  alt="Ronald Richards"
-                  className="w-10 h-10 rounded-full object-cover border border-gray-200"
-                />
-
-                <div>
-                  <h4 className="text-[#0a1118] text-sm sm:text-base font-extrabold leading-tight">
-                    Ronald Richards
-                  </h4>
-
-                  <p className="text-gray-400 text-xs font-semibold">
-                    CEO & Founder
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
           </motion.div>
 
         </div>
