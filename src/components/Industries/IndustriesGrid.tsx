@@ -152,6 +152,7 @@ export default function IndustriesGrid() {
         console.log("Length:", data.length);
 
         setIndustries(data);
+        console.log("data", data);
         setLoading(false);
       })
       .catch((err) => {
