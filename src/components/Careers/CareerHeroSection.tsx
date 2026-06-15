@@ -1,6 +1,6 @@
 const CareerHeroSection = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:h-screen overflow-hidden">
       {/* Background Image */}
       <img
         src="/Career/CareerHome-1.avif"
@@ -14,10 +14,10 @@ const CareerHeroSection = () => {
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         {/* Heading */}
-        <h1 className="text-[55px] md:text-[65px] font-bold mb-4">Careers</h1>
+        <h1 className="text-4xl sm:text-5xl md:text-[65px] font-bold mb-4 text-center px-4">Careers</h1>
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-3 text-xl font-medium">
+        <div className="flex items-center gap-2 sm:gap-3 text-sm sm:text-lg md:text-xl font-medium text-center px-4">
           <span>Home</span>
           <span>/</span>
           <span>Careers</span>

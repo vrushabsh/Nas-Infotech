@@ -42,7 +42,8 @@
 
   "ctaTitle": "Ready To Modernize Your Banking Operations?",
   "ctaDescription": "Partner with us to build secure, scalable, and customer-focused banking solutions that drive growth and innovation.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Insurance.webp"
 },
   {
   "id": "ecommerce",
@@ -87,7 +88,8 @@
 
   "ctaTitle": "Ready To Scale Your Online Business?",
   "ctaDescription": "Let us help you create a modern e-commerce platform that boosts sales and delivers exceptional customer experiences.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/ecommerce.webp"
 },
  {
   "id": "healthcare",
@@ -132,7 +134,8 @@
 
   "ctaTitle": "Ready To Digitally Transform Healthcare Services?",
   "ctaDescription": "Partner with us to develop innovative healthcare solutions that improve patient care and operational excellence.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Healthcare.webp"
 },
   {
   "id": "education",
@@ -177,7 +180,8 @@
 
   "ctaTitle": "Ready To Transform Learning Experiences?",
   "ctaDescription": "Build modern educational platforms that inspire learning and improve academic outcomes.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Education.webp"
 },
   {
   "id": "pharma",
@@ -222,7 +226,8 @@
 
   "ctaTitle": "Ready To Modernize Pharmaceutical Operations?",
   "ctaDescription": "Drive innovation and compliance with technology solutions designed for the pharmaceutical industry.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Pharma.webp"
 },
   {
   "id": "insurance",
@@ -267,7 +272,8 @@
 
   "ctaTitle": "Ready To Digitize Insurance Operations?",
   "ctaDescription": "Transform insurance processes with scalable solutions that improve efficiency and customer satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Insurance.webp"
 },
   {
   "id": "telecommunication",
@@ -312,7 +318,8 @@
 
   "ctaTitle": "Ready To Accelerate Telecom Innovation?",
   "ctaDescription": "Build future-ready telecom platforms that enhance connectivity and customer satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Telecommunication.webp"
 },
   {
   "id": "manufacturing",
@@ -357,7 +364,8 @@
 
   "ctaTitle": "Ready To Build A Smarter Manufacturing Ecosystem?",
   "ctaDescription": "Modernize manufacturing operations with intelligent solutions that improve efficiency and productivity.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+   "image": "/Industries/Manufacturing.webp"
 },
   {
   "id": "real-estate",
@@ -402,7 +410,8 @@
 
   "ctaTitle": "Ready To Modernize Real Estate Operations?",
   "ctaDescription": "Create seamless digital experiences that improve property management and customer satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+   "image": "/Industries/RealEstate.webp"
 },
   {
   "id": "finance",
@@ -447,7 +456,8 @@
 
   "ctaTitle": "Ready To Transform Financial Operations?",
   "ctaDescription": "Build secure and scalable financial systems that support growth and innovation.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Finance.webp"
 },
  {
   "id": "logistics",
@@ -492,7 +502,9 @@
 
   "ctaTitle": "Ready To Optimize Logistics Operations?",
   "ctaDescription": "Leverage intelligent technology to improve supply chain performance and customer satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+   "image": "/Industries/logistic.webp"
+
 },
   {
   "id": "professional-services",
@@ -537,7 +549,8 @@
 
   "ctaTitle": "Ready To Improve Professional Service Delivery?",
   "ctaDescription": "Empower your teams with digital solutions that drive efficiency and client satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/Professional Services.webp"
 },
   {
   "id": "it-transformation",
@@ -582,7 +595,8 @@
 
   "ctaTitle": "Ready To Start Your Digital Transformation Journey?",
   "ctaDescription": "Empower your organization with innovative technologies that drive growth, agility, and long-term success.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/IT Digital Transformation.webp"
 },
  {
   "id": "construction",
@@ -627,7 +641,8 @@
 
   "ctaTitle": "Ready To Build Smarter Construction Operations?",
   "ctaDescription": "Digitize construction workflows and improve project outcomes with modern technology solutions.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+   "image": "/Industries/Construction.webp"
 },
   {
   "id": "field-service",
@@ -672,6 +687,7 @@
 
   "ctaTitle": "Ready To Optimize Field Service Operations?",
   "ctaDescription": "Empower your workforce with intelligent field service solutions that improve efficiency and customer satisfaction.",
-  "ctaButton": "Contact Us"
+  "ctaButton": "Contact Us",
+  "image": "/Industries/FieldServices.webp"
 }
 ]

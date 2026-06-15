@@ -103,6 +103,22 @@ export default function IndustryDetails() {
       {/* ==========================================
           REFACTORED SPLIT GRID HERO SECTION
          ========================================== */}
+      <section
+        className="relative w-full min-h-[85vh] flex flex-col justify-between pt-32 pb-12 px-4 sm:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: industry.image
+            ? `linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.65)), url(${industry.image})`
+            : `linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.95))`
+        }}
+      >
+        {/* Transparent Geometric Grid Overlay to add technical texture */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+
+        {/* Hero Left Aligned Text Elements */}
+        <div className="max-w-4xl mx-auto w-full my-auto text-left space-y-6 relative z-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-[1.15] tracking-tight drop-shadow-sm max-w-3xl">
+            {industry.heroTitle}
+          </h1>
       <section className="relative min-h-[85vh] flex items-center bg-white border-b border-stone-200/60 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/40 via-black/30 to-transparent pointer-events-none z-10" />
 
@@ -124,6 +140,12 @@ export default function IndustryDetails() {
               )}
             </h1>
 
+          <div className="pt-4 flex flex-wrap gap-4">
+            <button className="bg-[#FFB057] hover:bg-[#f5a13f] text-[#111827] font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+              – DISCOVER MORE
+            </button>
+          </div>
+        </div>
             <p className="text-stone-500 text-base sm:text-lg max-w-2xl leading-relaxed">
               {industry.heroSubtitle}
             </p>
@@ -160,6 +182,8 @@ export default function IndustryDetails() {
          ========================================== */}
       <section className="py-20 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          {/* Overview Info Block */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div className="space-y-2">
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#E5A93C]">
@@ -207,6 +231,8 @@ export default function IndustryDetails() {
               return (
                 <div
                   key={idx}
+                  className={`border transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-sm ${isOpen ? "border-[#E5A93C]/40 ring-1 ring-[#E5A93C]/10" : "border-slate-200/80 hover:border-slate-300"
+                    }`}
                   className={`border transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-sm ${
                     isOpen
                       ? "border-[#E5A93C]/40 ring-1 ring-[#E5A93C]/10"
@@ -290,6 +316,39 @@ export default function IndustryDetails() {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {industry.technologies.map((tech, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl border border-slate-200/70 bg-[#FAF9F5]/40 hover:bg-white hover:border-[#E5A93C]/40 transition-all text-left flex flex-col justify-between min-h-[140px] group shadow-sm"
+              >
+                <span className="text-[10px] font-mono font-bold text-slate-400 group-hover:text-[#E5A93C] transition-colors">
+                  // NODE_0{index + 1}
+                </span>
+                <span className="text-base font-bold text-slate-900 tracking-tight block pt-4">
+                  {tech}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+          ACTION CTA STRIP
+         ========================================== */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 pb-16">
+        <div className="w-full rounded-[2.5rem] bg-gradient-to-r from-slate-950 to-slate-900 p-10 sm:p-14 text-center space-y-6 relative overflow-hidden border border-slate-800 shadow-2xl">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#E5A93C]/5 rounded-full blur-[80px] pointer-events-none" />
+
+          <div className="space-y-2 relative z-10">
+            <h3 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+              {industry.ctaTitle}
+            </h3>
+            <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
+              {industry.ctaDescription}
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industry.technologies.map((tech, index) => {
               const isActive = activeTechIndex === index;
