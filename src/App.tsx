@@ -11,6 +11,7 @@ import Careers from "./pages/Careers";
 // import ServiceDetailPage from "./components/ServicesDetails/ServiceDetailsPage";
 import ServiceDetails from "./pages/ServiceDetails/[slug]";
 import IndustryDetails from "./pages/IndustryDetails/[slug]";
+import ScrollToUp from "./components/Home/ScrollToTop";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         
       </Routes>
       <Footer />
+      <ScrollToUp />
     </>
   );
 };

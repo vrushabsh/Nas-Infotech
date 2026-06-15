@@ -35,7 +35,7 @@ export default function ServicesPage() {
               }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group relative h-[470px] rounded-[28px] overflow-hidden bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100"
+              className="group relative h-[420px] sm:h-[450px] lg:h-[470px] rounded-[28px] overflow-hidden bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100"
             >
               <div className="relative w-full h-full overflow-hidden">
                 <motion.img
@@ -52,14 +52,14 @@ export default function ServicesPage() {
               <motion.div
                 whileHover={{ y: -10 }}
                 transition={{ duration: 0.35 }}
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-[24px] p-5 shadow-xl z-20"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] sm:w-[90%] bg-white rounded-[24px] p-4 sm:p-5 shadow-xl z-20"
               >
-                <h3 className="text-[20px] font-bold text-[#0a123d] leading-tight">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-[#0a123d] leading-tight">
                   {service.serviceName}
                 </h3>
 
                 <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-[14px] leading-[24px] text-[#666] mt-4">
+                  <p className="text-[13px] sm:text-[14px] leading-[22px] sm:leading-[24px] text-[#666] mt-4">
                     {service.overview?.description}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ export default function ServicesPage() {
                     whileHover={{ x: 4 }}
                     className="flex items-center justify-between cursor-pointer"
                   >
-                    <span className="text-[15px] font-semibold text-[#0a123d] hover:text-[#FFB057] transition-colors">
+                    <span className="text-[14px] sm:text-[15px] font-semibold text-[#0a123d] hover:text-[#FFB057] transition-colors">
                       Learn More
                     </span>
 
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                         rotate: 45,
                         scale: 1.08,
                       }}
-                      className="w-10 h-10 rounded-full bg-[#FFB057] flex items-center justify-center shadow-md"
+                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#FFB057] flex items-center justify-center shadow-md"
                     >
                       <ArrowUpRight size={18} className="text-[#0a123d]" />
                     </motion.div>

@@ -187,11 +187,11 @@ const LifeAtNasInfotech: React.FC = () => {
 
               {/* CONTENT */}
               <div className="p-5 bg-[#fff8f2]">
-                <h3 className="font-bold text-[20px] text-slate-900 mb-3 leading-tight">
+                <h3 className="font-bold text-[18px] sm:text-[20px] text-slate-900 mb-3 leading-tight">
                   {member.title}
                 </h3>
 
-                <p className="text-[14px] leading-6 text-slate-600">
+                <p className="text-[13px] sm:text-[14px] leading-6 text-slate-600">
                   {member.description}
                 </p>
 

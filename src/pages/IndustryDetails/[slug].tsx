@@ -65,14 +65,14 @@ export default function IndustryDetails() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F5] antialiased text-slate-900 selection:bg-[#E5A93C] selection:text-white">
-      
+
       {/* ==========================================
           IMMERSIVE FULL-WIDTH HERO SECTION (As Requested)
          ========================================== */}
-      <section 
+      <section
         className="relative w-full min-h-[85vh] flex flex-col justify-between pt-32 pb-12 px-4 sm:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: industry.image 
+          backgroundImage: industry.image
             ? `linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.65)), url(${industry.image})`
             : `linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.95))`
         }}
@@ -82,7 +82,7 @@ export default function IndustryDetails() {
 
         {/* Hero Left Aligned Text Elements */}
         <div className="max-w-4xl mx-auto w-full my-auto text-left space-y-6 relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.15] tracking-tight drop-shadow-sm max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-[1.15] tracking-tight drop-shadow-sm max-w-3xl">
             {industry.heroTitle}
           </h1>
 
@@ -91,7 +91,7 @@ export default function IndustryDetails() {
           </p>
 
           <div className="pt-4 flex flex-wrap gap-4">
-            <button className="bg-[#E5A93C] hover:bg-[#cfa12e] text-slate-950 text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-md shadow-lg transition-all transform hover:-translate-y-0.5">
+            <button className="bg-[#FFB057] hover:bg-[#f5a13f] text-[#111827] font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
               – DISCOVER MORE
             </button>
           </div>
@@ -135,7 +135,7 @@ export default function IndustryDetails() {
          ========================================== */}
       <section className="py-20 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Overview Info Block */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div className="space-y-2">
@@ -172,11 +172,10 @@ export default function IndustryDetails() {
             {industry.benefits.map((benefit, idx) => {
               const isOpen = openId === idx;
               return (
-                <div 
+                <div
                   key={idx}
-                  className={`border transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-sm ${
-                    isOpen ? "border-[#E5A93C]/40 ring-1 ring-[#E5A93C]/10" : "border-slate-200/80 hover:border-slate-300"
-                  }`}
+                  className={`border transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-sm ${isOpen ? "border-[#E5A93C]/40 ring-1 ring-[#E5A93C]/10" : "border-slate-200/80 hover:border-slate-300"
+                    }`}
                 >
                   <button
                     onClick={() => setOpenId(isOpen ? null : idx)}
@@ -235,7 +234,7 @@ export default function IndustryDetails() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {industry.technologies.map((tech, index) => (
-              <div 
+              <div
                 key={index}
                 className="p-6 rounded-2xl border border-slate-200/70 bg-[#FAF9F5]/40 hover:bg-white hover:border-[#E5A93C]/40 transition-all text-left flex flex-col justify-between min-h-[140px] group shadow-sm"
               >
@@ -257,7 +256,7 @@ export default function IndustryDetails() {
       <section className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 pb-16">
         <div className="w-full rounded-[2.5rem] bg-gradient-to-r from-slate-950 to-slate-900 p-10 sm:p-14 text-center space-y-6 relative overflow-hidden border border-slate-800 shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#E5A93C]/5 rounded-full blur-[80px] pointer-events-none" />
-          
+
           <div className="space-y-2 relative z-10">
             <h3 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
               {industry.ctaTitle}
@@ -274,7 +273,7 @@ export default function IndustryDetails() {
           </div>
         </div>
       </section>
-      
+
     </div>
   );
 }

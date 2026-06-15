@@ -171,10 +171,10 @@ const CareerJobOpportunities = () => {
             <span className="inline-flex items-center px-3 py-1 text-xs font-semibold tracking-wide border border-neutral-300 rounded-full text-neutral-800 bg-white/50 backdrop-blur-sm mb-6 shadow-sm">
               We're hiring!
             </span>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#101828] mb-5 leading-[1.15]">
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] mb-4 leading-[1.1]">
               Job Opportunities For You
             </h1>
-            <p className="text-[#475467] text-lg sm:text-xl leading-relaxed font-normal mb-8">
+            <p className="text-[#475467] text-base sm:text-lg leading-relaxed font-normal mb-8 max-w-md">
               Find your next career step. We're looking for passionate individuals to join our global team. Explore open roles across engineering, management, and product design.
             </p>
           </section>
