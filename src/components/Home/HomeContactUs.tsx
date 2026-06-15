@@ -110,10 +110,10 @@ const HomeContactUs: React.FC = () => {
                   Tech Helpline
                 </span>
                 <a
-                  href="tel:+1123456789"
+                  href="tel:+919022844929"
                   className="text-white font-black text-base sm:text-lg hover:text-[#FFB057] transition-colors duration-200"
                 >
-                  Call: +(123) 456-789
+                  Call: +(91) 9022844929
                 </a>
               </div>
             </div>

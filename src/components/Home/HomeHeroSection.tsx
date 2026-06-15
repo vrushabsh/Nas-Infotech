@@ -1,12 +1,12 @@
 import React from "react";
 import DynamicButton from "../ReusableComponents/DynamicButton";
-import logo from "../../../public/Home/Logos/logo.webp";
-import logo1 from "../../../public/Home/Logos/logo1.webp";
-import logo2 from "../../../public/Home/Logos/logo2.webp";
-import logo3 from "../../../public/Home/Logos/logo3.webp";
-import logo4 from "../../../public/Home/Logos/logo4.webp";
-import logo5 from "../../../public/Home/Logos/logo5.webp";
-import logo6 from "../../../public/Home/Logos/logo6.webp";
+import logo from "/Home/Logos/logo.webp";
+import logo1 from "/Home/Logos/logo1.webp";
+import logo2 from "/Home/Logos/logo2.webp";
+import logo3 from "/Home/Logos/logo3.webp";
+import logo4 from "/Home/Logos/logo4.webp";
+import logo5 from "/Home/Logos/logo5.webp";
+import logo6 from "/Home/Logos/logo6.webp";
 
 const HomeHeroSection: React.FC = () => {
   // Logos Array
