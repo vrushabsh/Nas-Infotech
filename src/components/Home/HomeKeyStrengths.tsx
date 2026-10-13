@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { motion, type Variants } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";

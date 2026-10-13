@@ -278,17 +278,18 @@ const ServiceDetails = () => {
                 {
                   step: "01.",
                   title: "Talk With Team",
-                  desc: "Lorem ipsum dolor sit amet consectetur performance standard loops setup.",
+                  desc: "We connect with your team to understand your business goals, target audience, and challenges. Together, we identify the right digital marketing strategies to achieve measurable results.",
                 },
                 {
                   step: "02.",
                   title: "Make A Plan",
-                  desc: "Lorem ipsum dolor sit amet engineering localized deployment infrastructure.",
+                  desc: "We create a customized marketing plan tailored to your business needs and objectives. Our strategy focuses on improving online visibility, attracting potential customers, and increasing conversions."
                 },
                 {
                   step: "03.",
+                  
                   title: "Digital Marketing Work",
-                  desc: "Lorem ipsum dolor sit amet optimization cross platform parameters.",
+                  desc: "Our team implements effective SEO, social media, and online advertising strategies to grow your brand. We continuously monitor performance and optimize campaigns to drive traffic and generate quality leads."
                 },
               ].map((stepObj, idx) => (
                 <div
