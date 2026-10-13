@@ -1,5 +1,13 @@
-import { useState } from 'react';
-import { ArrowUpRight, MapPin, Clock, X, Briefcase, GraduationCap, Code } from 'lucide-react';
+import { useState } from "react";
+import {
+  ArrowUpRight,
+  MapPin,
+  Clock,
+  X,
+  Briefcase,
+  GraduationCap,
+  Code,
+} from "lucide-react";
 
 const Img1 = "/Career/careerHeroImg.png";
 
@@ -16,145 +24,250 @@ interface Job {
 }
 
 const CareerJobOpportunities = () => {
-  const [activeCategory, setActiveCategory] = useState('View all');
+  const [activeCategory, setActiveCategory] = useState("View all");
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [applyingJob, setApplyingJob] = useState<Job | null>(null);
 
   // Application form fields state management
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    mobileNumber: '',
-    designation: '',
-    experience: '',
-    resume: null as File | null
+    fullName: "",
+    email: "",
+    mobileNumber: "",
+    designation: "",
+    experience: "",
+    resume: null as File | null,
   });
 
-  const categories = [
-    'View all',
-    'Development',
-    'Design',
-    'Management'
-  ];
+  const categories = ["View all", "Development", "Design", "Management"];
 
   const jobs: Job[] = [
     {
       id: 1,
-      title: 'Software Engineer',
-      category: 'Development',
-      description: 'Designing, developing and maintaining high-quality software applications. Participating in code reviews to ensure quality. Troubleshooting and resolving software defects and performance issues.',
-      skills: ['Python', 'Java', 'C++', 'DSA', 'Git', 'SDLC', 'SQL', 'NoSQL'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "Software Engineer",
+      category: "Development",
+      description:
+        "Designing, developing and maintaining high-quality software applications. Participating in code reviews to ensure quality. Troubleshooting and resolving software defects and performance issues.",
+      skills: ["Python", "Java", "C++", "DSA", "Git", "SDLC", "SQL", "NoSQL"],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 2,
-      title: 'Web Developer',
-      category: 'Development',
-      description: 'Design, develop, and maintain user-friendly, responsive and visually appealing websites. Optimizing web applications for speed and performance. Developing new features based on project requirements.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Node.js', 'Django'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "Web Developer",
+      category: "Development",
+      description:
+        "Design, develop, and maintain user-friendly, responsive and visually appealing websites. Optimizing web applications for speed and performance. Developing new features based on project requirements.",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Angular",
+        "Node.js",
+        "Django",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 3,
-      title: 'Product Manager',
-      category: 'Management',
-      description: 'Collaborating with cross-functional teams throughout the product lifecycle. Communicating product plans, progress and results to stakeholders. Ensuring alignment and managing expectations.',
-      skills: ['Problem-Solving', 'Decision-Making', 'Leadership', 'Strategic Planning', 'Market Research'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "Product Manager",
+      category: "Management",
+      description:
+        "Collaborating with cross-functional teams throughout the product lifecycle. Communicating product plans, progress and results to stakeholders. Ensuring alignment and managing expectations.",
+      skills: [
+        "Problem-Solving",
+        "Decision-Making",
+        "Leadership",
+        "Strategic Planning",
+        "Market Research",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 4,
-      title: 'UX/UI Designer',
-      category: 'Design',
-      description: 'Creating user-centered designs through wireframes, prototypes and mockups. Conducting user research and usability testing to gather insights and validate design decisions.',
-      skills: ['User-Centric Design', 'Wireframing', 'Prototyping', 'Sketch', 'Adobe XD', 'Figma', 'Usability Testing', 'Visual Design', 'Responsive Design'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "UX/UI Designer",
+      category: "Design",
+      description:
+        "Creating user-centered designs through wireframes, prototypes and mockups. Conducting user research and usability testing to gather insights and validate design decisions.",
+      skills: [
+        "User-Centric Design",
+        "Wireframing",
+        "Prototyping",
+        "Sketch",
+        "Adobe XD",
+        "Figma",
+        "Usability Testing",
+        "Visual Design",
+        "Responsive Design",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 5,
-      title: 'Data Scientist',
-      category: 'Development',
-      description: 'Analyzing large and complex datasets to extract actionable insights. Developing predictive models and machine learning algorithms to solve business problems and enhance products.',
-      skills: ['Statistical Analysis', 'Machine Learning', 'Data Visualization', 'Python', 'R', 'SQL', 'Pandas', 'NumPy'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "Data Scientist",
+      category: "Development",
+      description:
+        "Analyzing large and complex datasets to extract actionable insights. Developing predictive models and machine learning algorithms to solve business problems and enhance products.",
+      skills: [
+        "Statistical Analysis",
+        "Machine Learning",
+        "Data Visualization",
+        "Python",
+        "R",
+        "SQL",
+        "Pandas",
+        "NumPy",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 6,
-      title: 'DevOps Engineer',
-      category: 'Development',
-      description: 'Designing, implementing, and maintaining CI/CD pipelines. Automating deployment and scaling processes. Ensuring applications run smoothly and efficiently.',
-      skills: ['Ansible', 'Puppet', 'Chef', 'Docker', 'Kubernetes', 'Bash', 'Python', 'Ruby'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "DevOps Engineer",
+      category: "Development",
+      description:
+        "Designing, implementing, and maintaining CI/CD pipelines. Automating deployment and scaling processes. Ensuring applications run smoothly and efficiently.",
+      skills: [
+        "Ansible",
+        "Puppet",
+        "Chef",
+        "Docker",
+        "Kubernetes",
+        "Bash",
+        "Python",
+        "Ruby",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 7,
-      title: 'Network Engineer',
-      category: 'Development',
-      description: 'Designing, implementing and maintaining network infrastructure. Monitoring network performance. Addressing problems and delivering prompt solutions to reduce downtime.',
-      skills: ['Network Protocols', 'Network Hardware', 'Network Monitoring', 'Network Security', 'Troubleshooting', 'Cloud Networking'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
+      title: "Network Engineer",
+      category: "Development",
+      description:
+        "Designing, implementing and maintaining network infrastructure. Monitoring network performance. Addressing problems and delivering prompt solutions to reduce downtime.",
+      skills: [
+        "Network Protocols",
+        "Network Hardware",
+        "Network Monitoring",
+        "Network Security",
+        "Troubleshooting",
+        "Cloud Networking",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
     },
     {
       id: 8,
-      title: 'Database Administrator',
-      category: 'Development',
-      description: 'Installing, configuring and maintaining database systems. Designing and implementing database schemas. Optimizing queries. Ensuring data integrity and security.',
-      skills: ['MySQL', 'PostgreSQL', 'Oracle', 'SQL Server', 'SQL', 'AWS RDS', 'Azure SQL'],
-      experience: '0-4 years',
-      education: 'BE/BTech in Computer Science or a related field',
-      location: '100% remote',
-      type: 'Full-time'
-    }
+      title: "Database Administrator",
+      category: "Development",
+      description:
+        "Installing, configuring and maintaining database systems. Designing and implementing database schemas. Optimizing queries. Ensuring data integrity and security.",
+      skills: [
+        "MySQL",
+        "PostgreSQL",
+        "Oracle",
+        "SQL Server",
+        "SQL",
+        "AWS RDS",
+        "Azure SQL",
+      ],
+      experience: "0-4 years",
+      education: "BE/BTech in Computer Science or a related field",
+      location: "100% remote",
+      type: "Full-time",
+    },
   ];
 
   // Helper function to auto-populate fields when opening the modal form
   const handleOpenApplyForm = (job: Job) => {
     setSelectedJob(null); // Clear detail modal overlay view
     setFormData({
-      fullName: '',
-      email: '',
-      mobileNumber: '',
+      fullName: "",
+      email: "",
+      mobileNumber: "",
       designation: job.title,
       experience: job.experience,
-      resume: null
+      resume: null,
     });
     setApplyingJob(job);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  // const handleFormSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   alert(`Application submitted successfully for ${applyingJob?.title}!`);
+  //   setApplyingJob(null);
+  // };
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(`Application submitted successfully for ${applyingJob?.title}!`);
-    setApplyingJob(null);
+
+    try {
+      const form = new FormData();
+
+      form.append("fullName", formData.fullName);
+      form.append("email", formData.email);
+      form.append("mobileNumber", formData.mobileNumber);
+      form.append("designation", formData.designation);
+      form.append("experience", formData.experience);
+
+      if (formData.resume) {
+        form.append("resume", formData.resume);
+      }
+
+      const response = await fetch("http://localhost:5000/api/career", {
+        method: "POST",
+        body: form,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Application submitted successfully!");
+
+        setFormData({
+          fullName: "",
+          email: "",
+          mobileNumber: "",
+          designation: "",
+          experience: "",
+          resume: null,
+        });
+
+        setApplyingJob(null);
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit application");
+    }
   };
 
-  const filteredJobs = activeCategory === 'View all'
-    ? jobs
-    : jobs.filter(job => job.category === activeCategory);
+  const filteredJobs =
+    activeCategory === "View all"
+      ? jobs
+      : jobs.filter((job) => job.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-[#F9F8F6] text-[#101828] font-sans antialiased selection:bg-rose-100 relative overflow-x-hidden">
-
       {/* Dark overlay backdrop block behind your Global Navbar */}
       <div className="absolute top-0 left-0 right-0 h-[90px] bg-gradient-to-b from-black/80 via-black/50 to-transparent pointer-events-none z-10" />
 
@@ -163,7 +276,6 @@ const CareerJobOpportunities = () => {
 
       {/* Main Content Container */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
-
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Left Content Column */}
@@ -175,7 +287,9 @@ const CareerJobOpportunities = () => {
               Job Opportunities For You
             </h1>
             <p className="text-[#475467] text-base sm:text-lg leading-relaxed font-normal mb-8 max-w-md">
-              Find your next career step. We're looking for passionate individuals to join our global team. Explore open roles across engineering, management, and product design.
+              Find your next career step. We're looking for passionate
+              individuals to join our global team. Explore open roles across
+              engineering, management, and product design.
             </p>
           </section>
 
@@ -199,9 +313,10 @@ const CareerJobOpportunities = () => {
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-[16px] py-2 text-[14px] font-medium rounded-full transition-all duration-200 whitespace-nowrap border cursor-pointer active:scale-95
-                    ${isActive
-                      ? 'bg-[#101828] text-white border-[#101828] shadow-sm'
-                      : 'bg-white text-[#344054] border-neutral-250 hover:bg-neutral-50 hover:border-neutral-400'
+                    ${
+                      isActive
+                        ? "bg-[#101828] text-white border-[#101828] shadow-sm"
+                        : "bg-white text-[#344054] border-neutral-250 hover:bg-neutral-50 hover:border-neutral-400"
                     }
                   `}
                 >
@@ -241,7 +356,10 @@ const CareerJobOpportunities = () => {
                       <Code size={12} /> Skills:
                     </span>
                     {job.skills.slice(0, 5).map((skill, i) => (
-                      <span key={i} className="text-xs bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded">
+                      <span
+                        key={i}
+                        className="text-xs bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -266,7 +384,7 @@ const CareerJobOpportunities = () => {
                       <Briefcase size={13} className="text-gray-400" />
                       {job.experience}
                     </span>
-                    
+
                     {/* Handled custom addition request: Read More action badge aligned right alongside indicators */}
                     <button
                       onClick={() => setSelectedJob(job)}
@@ -291,9 +409,11 @@ const CareerJobOpportunities = () => {
             ))
           ) : (
             <div className="text-center py-16 border-b border-neutral-200">
-              <p className="text-[#475467] font-medium text-base">No open positions in this category right now.</p>
+              <p className="text-[#475467] font-medium text-base">
+                No open positions in this category right now.
+              </p>
               <button
-                onClick={() => setActiveCategory('View all')}
+                onClick={() => setActiveCategory("View all")}
                 className="mt-2 text-sm font-semibold text-neutral-900 underline underline-offset-4 hover:text-neutral-700"
               >
                 Clear filter
@@ -319,26 +439,43 @@ const CareerJobOpportunities = () => {
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
                   {selectedJob.category}
                 </span>
-                <h2 className="text-2xl font-bold text-[#101828] mt-3">{selectedJob.title}</h2>
+                <h2 className="text-2xl font-bold text-[#101828] mt-3">
+                  {selectedJob.title}
+                </h2>
                 <div className="flex flex-wrap gap-3 mt-2 text-sm text-[#475467]">
-                  <span className="flex items-center gap-1"><MapPin size={14} /> {selectedJob.location}</span>
-                  <span className="flex items-center gap-1"><Clock size={14} /> {selectedJob.type}</span>
-                  <span className="flex items-center gap-1"><Briefcase size={14} /> {selectedJob.experience}</span>
+                  <span className="flex items-center gap-1">
+                    <MapPin size={14} /> {selectedJob.location}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock size={14} /> {selectedJob.type}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Briefcase size={14} /> {selectedJob.experience}
+                  </span>
                 </div>
               </div>
 
               <hr className="border-neutral-100" />
 
               <div>
-                <h4 className="text-sm font-bold text-[#101828] mb-1.5 uppercase tracking-wider text-neutral-500">Roles & Responsibilities</h4>
-                <p className="text-[#475467] text-[15px] leading-relaxed">{selectedJob.description}</p>
+                <h4 className="text-sm font-bold text-[#101828] mb-1.5 uppercase tracking-wider text-neutral-500">
+                  Roles & Responsibilities
+                </h4>
+                <p className="text-[#475467] text-[15px] leading-relaxed">
+                  {selectedJob.description}
+                </p>
               </div>
 
               <div>
-                <h4 className="text-sm font-bold text-[#101828] mb-2 uppercase tracking-wider text-neutral-500">Skills Required</h4>
+                <h4 className="text-sm font-bold text-[#101828] mb-2 uppercase tracking-wider text-neutral-500">
+                  Skills Required
+                </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedJob.skills.map((skill, index) => (
-                    <span key={index} className="bg-neutral-100 text-neutral-800 text-xs font-medium px-2.5 py-1 rounded-md border border-neutral-200">
+                    <span
+                      key={index}
+                      className="bg-neutral-100 text-neutral-800 text-xs font-medium px-2.5 py-1 rounded-md border border-neutral-200"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -346,10 +483,17 @@ const CareerJobOpportunities = () => {
               </div>
 
               <div className="bg-neutral-50 p-3.5 rounded-xl border border-neutral-200 flex items-start gap-2.5">
-                <GraduationCap className="text-neutral-500 shrink-0 mt-0.5" size={18} />
+                <GraduationCap
+                  className="text-neutral-500 shrink-0 mt-0.5"
+                  size={18}
+                />
                 <div>
-                  <h4 className="text-xs font-bold text-neutral-600 uppercase tracking-wide">Education Requirements</h4>
-                  <p className="text-sm text-neutral-700 font-medium mt-0.5">{selectedJob.education}</p>
+                  <h4 className="text-xs font-bold text-neutral-600 uppercase tracking-wide">
+                    Education Requirements
+                  </h4>
+                  <p className="text-sm text-neutral-700 font-medium mt-0.5">
+                    {selectedJob.education}
+                  </p>
                 </div>
               </div>
             </div>
@@ -368,47 +512,63 @@ const CareerJobOpportunities = () => {
               <X size={20} />
             </button>
 
-            <h2 className="text-2xl font-bold text-center text-[#101828] mb-6">Job Application form</h2>
+            <h2 className="text-2xl font-bold text-center text-[#101828] mb-6">
+              Job Application form
+            </h2>
 
             <form onSubmit={handleFormSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Full Name</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Full Name
+                </label>
                 <input
                   type="text"
                   required
                   placeholder="Enter name"
                   value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, fullName: e.target.value })
+                  }
                   className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Email Address</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Email Address
+                </label>
                 <input
                   type="email"
                   required
                   placeholder="Enter your Email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Mobile number</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Mobile number
+                </label>
                 <input
                   type="tel"
                   required
                   placeholder="Enter mobile number"
                   value={formData.mobileNumber}
-                  onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, mobileNumber: e.target.value })
+                  }
                   className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-[#ffb066] focus:border-transparent bg-neutral-50/50"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Designation</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Designation
+                </label>
                 <input
                   type="text"
                   disabled
@@ -418,7 +578,9 @@ const CareerJobOpportunities = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Years of Experience</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Years of Experience
+                </label>
                 <input
                   type="text"
                   disabled
@@ -428,20 +590,41 @@ const CareerJobOpportunities = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-1">Your Resume</label>
+                <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  Your Resume
+                </label>
                 <div className="flex items-center justify-between border border-neutral-300 rounded-lg px-4 py-2 bg-neutral-50/50 text-sm">
                   <input
                     type="file"
                     required
+                    accept=".pdf,application/pdf"
                     id="resume-upload"
-                    onChange={(e) => setFormData({ ...formData, resume: e.target.files ? e.target.files[0] : null })}
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+
+                      if (!file) return;
+
+                      if (file.type !== "application/pdf") {
+                        alert("Only PDF files are allowed");
+                        e.target.value = "";
+                        return;
+                      }
+
+                      setFormData({
+                        ...formData,
+                        resume: file,
+                      });
+                    }}
                     className="hidden"
                   />
-                  <label htmlFor="resume-upload" className="bg-neutral-200 hover:bg-neutral-300 px-3 py-1 rounded border border-neutral-400 text-xs text-neutral-700 font-medium cursor-pointer transition-colors">
+                  <label
+                    htmlFor="resume-upload"
+                    className="bg-neutral-200 hover:bg-neutral-300 px-3 py-1 rounded border border-neutral-400 text-xs text-neutral-700 font-medium cursor-pointer transition-colors"
+                  >
                     Choose Files
                   </label>
                   <span className="text-neutral-400 text-xs truncate max-w-[200px]">
-                    {formData.resume ? formData.resume.name : 'No file chosen'}
+                    {formData.resume ? formData.resume.name : "No file chosen"}
                   </span>
                 </div>
               </div>

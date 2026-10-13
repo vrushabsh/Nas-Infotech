@@ -1,11 +1,20 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+interface Service {
+  id: number;
+  slug: string;
+  serviceName: string;
+  image: string;
+  overview?: {
+    description?: string;
+  };
+}
+
 export default function ServicesPage() {
-  const [services, setServices] = useState<any[]>([]);
-  const [showAll, setShowAll] = useState(false);
+  const [services, setServices] = useState<Service[]>([]);
 
   useEffect(() => {
     fetch("/Data/servicesdetails.json")
